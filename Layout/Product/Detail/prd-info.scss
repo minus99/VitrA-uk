@@ -1,0 +1,335 @@
+.ems-prd-wrp{
+    .ems-prd-{
+        &name{
+            *{
+                color: $cl6;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 1;
+            }
+        }
+        &group-name{
+            color: $cl14;
+            font-size: 16px;
+            font-weight: 500;
+
+            margin-bottom: 11px;
+            
+        }
+        &desc{
+            
+            color: $cl14;
+            font-size: 16px;
+            font-weight: 500;
+
+            margin-bottom: 11px;
+        }
+        &brand{
+            color: $cl7;
+            font-size: 24px;
+            font-weight: 700;
+            .lbf-koleksiyon{
+                &::before{
+                    content: $lbf-koleksiyon;
+                    margin-left: 5px;
+                }
+            }
+        }
+        &code{
+            color: $cl3;
+            font-size: 14px;
+            .code-lbf{
+                margin-right: 5px;
+                &:after{
+                    content: ":";
+                }
+            }
+        }
+        &share{
+            margin: 32px 0;
+            .share-buttons{
+                display: flex;
+                li{
+                    a{
+                        color: $cl14;
+                        i{
+                            font-size: 0;
+                            &:before{
+                                font-size: 32px;
+                            }
+                        }
+                    }
+                    + li{
+                        margin-left: 14px;
+                    }
+                }
+            }
+        }
+        &desc2{
+            color: $cl3;
+            font-size: 14px;
+        }
+        &designer{
+            .title{
+                margin-right: 5px;
+            }
+            .title,
+            .name{
+                color: $cl7;
+                font-size: 16px;
+                font-weight: 700;    
+            }
+        }
+        &compare-and-fav{
+            display: flex;
+            align-items: center;
+            margin-top: 52px;
+            margin-bottom: 32px;
+            > div{
+                display: inline-flex;
+                + div{
+                    margin-left: 24px;
+                }
+            }
+        }
+        &compare{
+            position: relative;
+            cursor: pointer;
+            .sStylerWrp_checkbox{
+                display: inline-flex;
+                &:before{
+                    @extend [class^="icon-"];
+                    @extend .icon-karsilastir:before;
+                    font-size: 44px;
+                    color: $cl6;
+                }
+                .cStyler{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            input{
+                display: none;
+            }
+            [id$="lbfOZS_KOD"]{
+                display: inline-flex !important;
+                align-items: center;
+                margin-left: 16px;
+                color: $cl6;
+                font-size: 14px;
+            }
+        }
+        &add-fav{
+            .btnFavoriEkle{
+                min-width: auto;
+                color: $cl6;
+                background: none;
+                border: 0;
+                line-height: 1;
+                padding: 0;
+                font-size: 14px;
+                > span{
+                    display: flex;
+                    align-items: center;
+                }
+                i{
+                    font-size: 0;
+                    margin-right: 16px;
+                    &:before{
+                        font-size: 44px;
+                    }
+                }
+                &.selected{
+                    i:before{
+                        @extend .icon-favori-iconu-secilmis:before;
+                    }
+                }
+            }
+        }
+        &filter{
+            .ems-prd-filter-item{
+                margin-bottom: 16px;
+                &.disabled,
+                &.tasarimci,{
+                    display: none;
+                }
+            }
+
+            .uk-accordion{
+                li{
+                    .ems-prd-filter-title{
+                        color: $cl3;
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 44px;
+                    }
+                    .uk-accordion-title{
+                        span{
+                            display: flex;
+                            align-items: center;
+                        }
+                        i{
+                            display: inline-block;
+                            font-size: 24px;
+                            margin-left: auto;
+                            //transition: all 0.5s cubic-bezier(0.8, 0, 0.5, 1);
+                        }
+                    }
+                    &.uk-open{
+                        .uk-accordion-title{
+                            i{
+                                //transform: rotate(90deg);
+                                &:before{
+                                    @extend .icon-remove:before;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-large) {
+    .ems-prd-wrp{
+        display: flex;
+        flex-direction: column;
+        .ems-prd-{
+            &brand,
+            &code,
+            &desc2,
+            &designer,
+            &compare-and-fav{
+                background: $cl8;
+                margin-left: -16px;
+                margin-right: -16px;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            &name{
+                order: 1;
+                margin-bottom: 5px;
+                *{
+                    font-size: 24px;
+                }
+            }
+            &desc{
+                order: 2;
+            }
+            &compare-mobile{
+                order: 3;
+            }
+            &brand{
+                order: 5;
+                color: $cl6;
+                font-size: 24px;
+
+                padding-top: 16px;
+            }
+            &code{
+                order: 6;
+            }
+            &share{
+                display: none;
+            }
+            &desc2{
+                order: 7;
+                padding-top: 12px;
+            }
+            &designer{
+                order: 8;
+                padding-top: 24px;
+                .title{
+                    color: #4A4A4A;
+                    font-size: 14px;
+                    font-weight: 400;    
+                }
+                .name{
+                    color: $cl7;
+                    font-size: 14px;
+                    font-weight: 400;    
+                }
+            }
+            &compare-and-fav{
+                order: 9;
+                display: flex;
+                align-items: center;
+                margin-top: 0;
+                margin-bottom: 0;
+                padding-top: 18px;
+                padding-bottom: 30px;
+                > div{
+                    display: inline-flex;
+                    + div{
+                        margin-left: 24px;
+                    }
+                }
+            }
+            &compare{
+                position: relative;
+                cursor: pointer;
+                .sStylerWrp_checkbox{
+                    display: inline-flex;
+                    &:before{
+                        font-size: 44px;
+                        color: $cl6;
+                    }
+                    .cStyler{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                input{
+                    display: none;
+                }
+                [id$="lbfOZS_KOD"]{
+                    margin-left: 8px;
+                }
+            }
+            &add-fav{
+                .btnFavoriEkle{
+                    i{
+                        margin-right: 8px;
+                        &:before{
+                            font-size: 28px;
+                        }
+                    }
+                }
+            }
+            &filter{
+                order: 4;
+                margin-bottom: 32px;
+                .ems-prd-filter-item{
+                    margin-bottom: 10px;
+                    &.disabled{
+                        display: none;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+                .ems-prd-zoom{
+                    padding-top: 32px;
+                    padding-bottom: 32px;
+                }
+                .swiper-left-column{
+                    display: none;
+                }
+                .product-detail-slider > .swiper-inner{
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
+}

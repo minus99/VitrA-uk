@@ -1,0 +1,55 @@
+//-------------------------------------------//
+//----- FILES LIST
+//-------------------------------------------//
+.ems-grid-files{
+    .ems-grid-row{
+        padding: 10px 0;
+    }
+    .ems-grid-img{
+        flex: 0 !important;
+        margin-right: 15px;
+        i{
+            font-size: 72px;
+        }
+    }
+    .ems-grid-name{
+        span{
+            margin-right: 5px;
+            :last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+
+.ems-member-files-footer {
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+    padding: 16px 0;
+
+    .all-files-download{
+        display: inline-flex;
+        align-items: center;
+
+        font-size: 14px;
+        i{
+            font-size: 0;
+            margin-left: 16px;
+            &:before{
+                font-size: 32px;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: $breakpoint-large) {
+    .ems-grid-files{
+        .ems-grid-img{
+            i{
+                font-size: 42px;
+            }
+        }
+    }
+}

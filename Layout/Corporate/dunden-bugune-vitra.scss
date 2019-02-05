@@ -1,0 +1,104 @@
+
+//-------------------------------------------//
+//----- TIMELINE
+//-------------------------------------------//
+.timeline{
+    padding-top: 64px;
+    padding-bottom: 64px;
+    position: relative;
+    &:before{
+        content:"";
+        display:inline-block;
+        width: 8px;
+        height: 100%;
+        background: $cl6;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    > div{
+        position: relative;
+        &:after{
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: $cl6;
+            position: absolute;
+            top: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:nth-child(odd){
+            padding-left: calc(50% + 28px);
+        }
+        &:nth-child(even){
+            padding-right: calc(50% + 28px);
+            text-align: right;
+        }
+
+        .date{
+            color: $cl6;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1;
+            padding-top: 24px;
+        }
+        .desc{
+            color: $cl3;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 1;
+            padding-top: 24px;
+            padding-bottom: 36px;
+            user-select: none;
+            span{
+                display: block;
+                + span{
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- TIMELINE
+    //-------------------------------------------//
+    .timeline{
+        padding-top: 36px;
+        padding-bottom: 36px;
+        &:before{
+            height: 95%;
+            left: 4px;
+            transform: translateX(0);
+        }
+        > div{
+            position: relative;
+            &:before{
+                left: 8px;
+            }
+            &:after{
+                left: 8px;
+                top: 50px;
+            }
+
+            &:nth-child(odd){
+                padding-left: 28px;
+            }
+            &:nth-child(even){
+                padding-right: 0;
+                padding-left: 28px;
+                text-align: left;
+            }
+            .desc{
+                font-size: 24px;
+            }
+        }
+    }
+
+}

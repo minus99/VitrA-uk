@@ -1,0 +1,208 @@
+//-------------------------------------------//
+//----- SWIPER GENERAL
+//-------------------------------------------//
+.swiper-container{
+    .swiper-inner{
+        overflow: hidden;
+    }
+    .swiper-pagination{
+        display: none;
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        width: initial;
+        height: initial;
+        margin-top: 0;
+        
+        background-image: none;
+    }
+    &.no-controls{
+        .swiper-button-prev,
+        .swiper-button-next{
+            display: none;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- HOMEPAGE SHOWCASE
+//-------------------------------------------//
+.homepage-showcase{
+    .hs-background{
+        position: relative;
+        height: 640px;
+        height: 70vh;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;   
+        
+        @media (min-width: $breakpoint-large) {
+            &:before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,.2);
+                z-index: 1;
+            }
+        }
+    }
+    .hs-container{
+        height: 100%;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        @extend .uk-container;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+    }
+    .hs-content{
+        @extend .uk-width-5-6;
+        .hs-title{
+            color: $white;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 130px;
+        }
+        .hs-desc{
+            color: $white;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+        }
+
+        &.txtBlack{
+            .hs-title,
+            .hs-desc{
+                color: $black;
+            }
+        }
+        &.txtGrey{
+            .hs-title,
+            .hs-desc{
+                color: $cl3;
+            }
+        }
+
+    }
+    .hs-link{
+        display: block;
+        font-size: 0;
+        /*position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 3;*/
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next{
+        font-size: 0;
+        i{
+            &:before{
+                font-size: 32px;
+                color: $white;
+            }
+        }
+        &.swiper-button-disabled{
+            opacity: 1;
+            cursor: pointer;
+            pointer-events: all;
+        }
+    }
+
+    .swiper-button-prev{
+        left: calc((100% - #{$breakpoint-xlarge}) / 2);
+    }
+    .swiper-button-next{
+        right: calc((100% - #{$breakpoint-xlarge}) / 2);
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- HOMEPAGE SHOWCASE
+    //-------------------------------------------//
+    .hp-showcase{
+        padding-bottom: 110px;
+        margin-bottom: 20px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .homepage-showcase{
+        overflow: initial;
+        .swiper-inner{
+            overflow: initial;
+        }
+        .hs-background{
+            height: 224px;
+            height: 40vh;
+            overflow: initial;
+        }
+        .hs-container{
+            padding-top: 0;
+            padding-bottom: 0px;
+            
+            justify-content: center;
+            align-items: center;
+        }
+        .hs-content{
+            .hs-title{
+                font-size: 32px;
+                line-height: 32px;
+                text-align: center;
+            }
+            .hs-desc{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                padding: 7px 16px;
+                height: 110px;
+                overflow: hidden;
+
+                color: $cl3;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+            }
+            &.txtBlack{
+                .hs-title{
+                    color: $white;
+                }
+                .hs-desc{
+                    color: $cl3;
+                }
+            }
+            &.txtGrey{
+                .hs-title{
+                    color: $white;
+                }
+                .hs-desc{
+                    color: $cl3;
+                }
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next{
+            i{
+                &:before{
+                    font-size: 16px;
+                }
+            }
+        }
+        .swiper-button-prev{
+            left: 16px;
+        }
+        .swiper-button-next{
+            right: 16px;
+        }
+    }
+
+}

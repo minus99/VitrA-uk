@@ -1,0 +1,262 @@
+//-------------------------------------------//
+//----- BABA
+//-------------------------------------------//
+.ems-product-list{
+    .ems-col-list-top{
+        position: relative;
+        margin-top: 0 !important;
+    }
+}
+
+//-------------------------------------------//
+//----- TUTUCU
+//-------------------------------------------//
+.active-filters-clone{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+
+//-------------------------------------------//
+//----- KARSILASTIR
+//-------------------------------------------//
+.urunPaging_btnKiyaslama{
+    display: inline-block;
+    width: 176px;
+    margin-right: 16px;
+    table, tbody{
+        width: 100%;
+    }
+    table{
+        display: table !important;
+    }
+    .btnKiyaslama{
+        width: 100%;
+        height: 32px;
+        padding-top: 2px;
+    }
+    .notifyjs-wrapper{
+        width: 100%;
+    }
+    .notifyjs-container{
+        overflow: initial !important;
+        bottom: -5px !important;
+    }
+    .notifyjs-arrow{
+        bottom: -10px !important;
+    }
+    .notifyjs-bootstrap-error{
+        color: $cl3;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 16px 16px 24px;
+        width: 100%;
+        max-width: 242px;
+        white-space: normal;
+        background-image: none;
+        background-color: $white;
+        border-color: $white;
+        box-shadow: 0 0 16px 0 rgba(0,0,0,0.16);
+    }
+}
+
+//-------------------------------------------//
+//----- SIRALAMA
+//-------------------------------------------//
+.ems-prd-list-sort{
+    $height : 32px;
+    width: 176px;
+    .sStylerWrp_select{
+        .sStylerWrp{
+            padding: 2px 16px !important;
+            height: $height !important;
+            color: $cl3;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        select{
+            height: $height !important;
+            padding: 2px 16px;
+
+            color: $cl3;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+
+
+//-------------------------------------------//
+//----- SEÇİLİ FİLTRELER
+//-------------------------------------------//
+.pnlUrunKiyasSecim{
+    margin-bottom: 32px;
+    .urunKiyaslamaOzellik_secimbaslik,
+    .urunKiyaslamaOzellik_UrunSayi{
+        display: none;
+    }
+    .urunKiyaslamaOzellik_secimler{
+        margin-left: -8px;
+        a{  
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 167px;
+            color: #4A4A4A;
+            font-size: 14px;
+            line-height: 25px;
+
+            padding: 3px 11px 4px;
+            margin: 8px;
+            border-radius: 16px;
+            background-color: #E4E4E4;
+            &:after{
+                @extend [class^="icon-"];
+                @extend .icon-kapat-cikis-yap-2:before;
+                margin-top: 1px;
+                margin-left: 15px;
+                font-size: 11px;
+            }
+            .key{
+                display: none;
+            }
+        }
+    }
+    .urunKiyaslamaOzellik_tumunuTemizle{
+        display: inline-block !important;
+        position: absolute;
+        top: 10px;
+        [id$="lnkPrmTumunuTemizle"]{
+            color: $cl6;
+            font-size: 14px;
+            line-height: 25px;
+            > span{
+                i{
+                    margin-left: 8px;
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- ALL PRODUCTS BUTTON
+//-------------------------------------------//
+.active-filters-clone{
+    .all-list-prd-btn-holder{
+        margin-right: 16px;
+        .all-list-prd{
+            width: 176px;
+            height: 32px;
+            padding-top: 2px;
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- BABA
+    //-------------------------------------------//
+    .ems-page-product-list{
+        .ems-col-list-top{
+        }
+    }
+
+    //-------------------------------------------//
+    //----- TUTUCU
+    //-------------------------------------------//
+    .active-filters-clone{
+        > *{
+            flex: 1;
+        }
+        a.btnDefault{
+            min-width: auto;
+        }
+    }
+    //-------------------------------------------//
+    //----- KARSILASTIR
+    //-------------------------------------------//
+    .urunPaging_btnKiyaslama{
+        display: inline-block;
+        width: auto;
+
+        margin-right: 16px;
+        table, tbody{
+            width: 100%;
+        }
+        table{
+            display: table !important;
+        }
+        .btnKiyaslama{
+            width: 100%;
+            height: 32px;
+            padding-top: 2px;
+        }
+        .notifyjs-wrapper{
+            width: 100%;
+        }
+        .notifyjs-container{
+            overflow: initial !important;
+            bottom: -5px !important;
+        }
+        .notifyjs-arrow{
+            bottom: -10px !important;
+        }
+        .notifyjs-bootstrap-error{
+            color: $cl3;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            padding: 16px 16px 24px;
+            width: 100%;
+            max-width: 242px;
+            white-space: normal;
+            background-image: none;
+            background-color: $white;
+            border-color: $white;
+            box-shadow: 0 0 16px 0 rgba(0,0,0,0.16);
+        }
+    }
+    //-------------------------------------------//
+    //----- SIRALAMA
+    //-------------------------------------------//
+    .ems-prd-list-sort{
+        $height : 32px;
+        width: auto;
+        .sStylerWrp_select{
+            .sStylerWrp{
+                font-size: 12px;
+            }
+            select{
+                font-size: 12px;
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- MOBILE FILTER BUTTON
+    //-------------------------------------------//
+    .mobile-element-filter-btn{
+        margin-bottom: 16px;
+        .btn-filter{
+            width: 100%;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- ALL PRODUCTS BUTTON
+    //-------------------------------------------//
+    .ems-prd-list-paging-bottom{
+        .all-list-prd-btn-holder{
+            .all-list-prd{
+                width: 100%;
+            }
+        }
+    }
+}

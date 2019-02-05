@@ -1,0 +1,209 @@
+/**************************************************/
+.jconfirm{
+    &.jconfirm.jconfirm-white,
+    &.jconfirm.jconfirm-light{
+        //BG EFFECT
+        .jconfirm-bg{
+            background-color: rgba(0, 0, 0, .6) !important;
+            opacity: 1;
+        }
+    }
+
+    .jconfirm-box{
+        
+        //CLOSE ICON
+        .jconfirm-closeIcon{
+            display: inline-block !important;
+            width: auto;
+            height: auto;
+            top: 17px;
+            right: 13px;
+            z-index: 1;
+            .btnMinPpCl{
+                display: inline-block;
+                &:before{
+                    @extend [class^="icon-"];
+                    @extend .icon-close:before;
+                    font-size: 16px;
+                    color: $cl3;
+                }
+            }
+        }
+    }
+}
+/**************************************************/
+
+
+.jconfirm {
+    &.jconfirm-light {
+        .jconfirm-bg {
+            background-color: $black;
+            opacity: .5;
+        }
+    }
+    .jconfirm-box {
+        background: $white;
+    }
+}
+.minPpIframe {
+    min-height: inherit;
+}
+
+html.popup-html {
+    background: $white;
+}
+.popupDefault {
+    font-family: Palanquin;
+    text-align: left;
+}
+.popupTitleDefault {
+    font-size: 24px;
+    color: $cl7;
+    font-weight: 700;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+//new project -- /uyeIslem/dashboard.aspx
+.popupFavoriGrup{
+    text-align: left;
+    .popupTitleFavoriGrup{
+        color: $cl7;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+    .dvUygAd {
+        margin-bottom: 32px;
+        [id$='lbfUYG_AD']{
+            display:block;
+            color: $cl7;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom:4px;
+        }
+        input{
+            width: 100%;
+            height: 32px;
+            border: 1.35px solid $cl13;
+            background-color: $cl8;
+        }
+    }
+    .dvUygIcon{
+        [id$='lbfUYG_ICONURL']{
+            color: $cl7;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+    }
+    .favoriGrup_iconSet{
+        @extend .uk-flex;
+        @extend .uk-flex-wrap;
+        margin-left: -4px;
+        margin-bottom: 32px;
+        .prj-icon-item{
+            cursor: pointer;
+            width: 33px;
+            height: 33px;
+            border: 1px solid $cl3;
+            border-radius: 6px;
+            padding: 4px;
+            margin:4px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            &.active {
+                background: #dedede;
+            }
+        }
+    }
+    .dbUygKaydet{
+        text-align: center;
+        .btnDefault{
+            @extend .btn-primary;
+            width: 80%;
+        }
+    }
+}
+
+/*Popup-Favori Grup Ekle*/
+.popupFavoriGrupContainer{
+    background: $white;
+    text-align: left;
+    .popupFavoriGrup_ekleLabel{
+        color: $cl3;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    .ulFavoriGrupListe{
+        overflow: auto;
+        //max-height: 90px;
+        height: 90px;
+    }
+    .favoriGrupListe{
+        &.item{
+            display: flex;
+            position: relative;
+            margin-bottom: 8px;
+        }
+    }
+    .dvUygIcon{
+        margin-right: 8px;
+        img{
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .dvUygAd{
+        color: $cl3;
+        font-size: 14px;
+    }
+    .dvUygAction{
+        .lnkFavoriGruptanKaldir{
+            display: none;
+        }
+        .lnkFavoriGrubunaEkle{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+        }
+    }
+    .popupFavoriGrup_grupYonet{
+        margin-top: 32px;
+    }
+    [id$='lbfUYG_FAVORIGRUPYONET']{
+        color: $cl6;
+        font-size: 12px;
+    }
+}
+
+////////////////////////////////////////
+.popupOtomasyon_btnSozlesmeYazdir{
+    margin-top: 24px;
+}
+.popupFacebookOnay{
+    margin-top: 24px;
+    > table{
+        > tbody{
+            > tr{
+                td{
+                    padding-bottom: 10px;
+                    padding-right: 16px;
+                }
+            }
+        }
+    }
+    .checkbox{
+        display: inline-flex;
+    }
+    .btnSozlesmeOnay{
+        padding: 16px 0 0 0;
+    }
+}

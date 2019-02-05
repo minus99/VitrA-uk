@@ -1,0 +1,54 @@
+.page-404 {
+    position: relative;
+}
+.holder-404 {
+    color: $cl3;
+    .icon-error {
+        font-size: 350px;
+        color: #ededed;
+        top: -50px;
+        left: 90px;
+        z-index: -1;
+    }
+    .row-1 {
+        margin-top: -70px;
+        .uk-text-lead {
+            font-size: 128px;
+            line-height: 1;
+        }
+    }
+    .row-2 {
+        padding: 0 40px;
+        .uk-text-lead {
+            font-size: 32px;
+        }
+        .uk-list {
+            li {
+                a {
+                    font-size: 18px;
+                    color: $cl6;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    .holder-404 {
+        .icon-error {
+            left: auto;
+            right: 0;
+            top: -30px;
+        }
+        .row-1 {
+            .uk-text-lead {
+                text-align: left !important;
+                padding-top: 130px;
+            }
+        }
+        .row-2 {
+            padding: 20px 0;
+        }
+    }
+}

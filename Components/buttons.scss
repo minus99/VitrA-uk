@@ -1,0 +1,285 @@
+//-------------------------------------------//
+//----- EMOS - SYSTEM BUTTON
+//-------------------------------------------//
+
+a.btnDefault{
+    @extend .btn;
+    @extend .btn-primary;
+}
+
+//-------------------------------------------//
+//----- BUTTON RESET
+//-------------------------------------------//
+%btn-reset{
+    color: inherit;
+    background-color: inherit;
+    padding: inherit;
+    border: inherit;
+    min-width: auto;
+}
+
+.btn-reset{
+    @extend %btn-reset;
+    &:focus,
+    &:hover{
+        @extend %btn-reset;
+    }
+}
+
+//-------------------------------------------//
+//----- GENERAL BUTTON
+//-------------------------------------------//
+.btn{
+    display: inline-block;
+    text-align: center;
+    min-width: 176px;
+    
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+
+    padding-top: 4px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    transition: all 0.3s cubic-bezier(0.8, 0, 0.5, 1);
+    outline: 0;
+
+    border-width: 1px;
+    border-style: solid;
+
+    &:hover{
+        text-decoration: initial;
+    }
+}
+
+//-------------------------------------------//
+//----- BIG BUTTON
+//-------------------------------------------//
+.btn-big{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    border-width: 1px;
+    border-style: solid;
+    
+}
+
+//-------------------------------------------//
+//----- DEFAULT BUTTON
+//-------------------------------------------//
+.btn-default{
+    background: #929292;
+    border-color: #929292;
+    color: $white;
+    &:hover{
+        background: #6e6e6e;
+        border-color: #6e6e6e;
+        color: $white;
+    }
+    &:focus{
+        background: #555555;
+        border-color: #555555;
+        color: $white;
+    }
+}
+
+//-------------------------------------------//
+//----- DEFAULT DARK BUTTON
+//-------------------------------------------//
+.btn-dark{
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+    color: $white;
+    &:hover{
+        background: #323232;
+        border-color: #323232;
+        color: $white;
+    }
+    &:focus{
+        background: #000000;
+        border-color: #000000;
+        color: $white;
+    }
+}
+
+//-------------------------------------------//
+//----- ALTERNATIVE BUTTON
+//-------------------------------------------//
+.btn-alternative{
+    color: #4a4a4a;
+    border-color: #4a4a4a;
+    &:hover{
+        background: #e2e2e2;
+        border-color: #e2e2e2;
+        color: #4a4a4a;
+    }
+    &:focus{
+        background: #b1b1b1;
+        border-color: #b1b1b1;
+        color: #4a4a4a;
+    }
+}
+
+//-------------------------------------------//
+//----- ALTERNATIVE BUTTON EFFECT
+//----- *a tag in span
+//-------------------------------------------//
+.btn-alternative-effect{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: all .3s ease;
+
+    text-align: center;
+    min-width: 176px;
+    line-height: 25px;
+    color: $cl3;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        transition: transform .6s ease;
+        right: 0;
+        bottom: 0;
+        background: $cl3;
+    }
+
+    &:before {
+        width: 100%;
+        height: 1px;
+        transform:  translateX(0);
+    }
+    &:after {
+        width: 1px;
+        height: 100%;
+        transform:  translateY(0);
+    }
+
+    > span {
+        display: block;
+        padding: 4px 20px 3px;
+        position: relative;
+        overflow: hidden;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            transition: transform .6s ease; 
+            left: 0;
+            top: 0;
+            background: $cl3;
+        }
+        &:before {
+          width: 100%;
+          height: 1px;
+          transform:  translateX(0);
+        }
+        &:after {
+          width: 1px;
+          height: 100%;
+          transform:  translateY(0);
+        }
+    }
+    &:hover{
+        background: #e2e2e2;
+        color: #4a4a4a;
+        &:before,
+        &:after{
+            transform:  translate(-100%, 100%);
+            background: #e2e2e2;
+        }
+        > span:before,
+        > span:after {
+            transform:  translate(100%, -100%);
+            background: #e2e2e2;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- PRIMARY BORDER BUTTON
+//-------------------------------------------//
+.btn-primary-border{
+    color: $white;
+    border-color: $white;
+    background: none;
+     
+    &:hover{
+        background: #973129;
+        border-color: #973129;
+        color: $white;
+    }
+    &:focus{
+        background: #6c231d;
+        border-color: #6c231d;
+        color: $white;
+    }
+}
+
+//-------------------------------------------//
+//----- PRIMARY BIG BUTTON
+//-------------------------------------------//
+.btn-primary-big{
+    color: $white;
+    background: #973129;
+    border-color: #973129;
+     
+    &:hover{
+        background: #b0473e;
+        border-color: #b0473e;
+        color: $white;
+    }
+    &:focus{
+        background: #6c231d;
+        border-color: #6c231d;
+        color: $white;
+    }
+}
+
+//-------------------------------------------//
+//----- PRIMARY BUTTON
+//-------------------------------------------//
+.btn-primary{
+    min-width: 112px;
+    color: $white;
+    background: #973129;
+    border-color: #973129;
+     
+    &:hover{
+        background: #b0473e;
+        border-color: #b0473e;
+        color: $white;
+    }
+    &:focus{
+        background: #6c231d;
+        border-color: #6c231d;
+        color: $white;
+    }
+}
+
+
+
+
+.emos-confirm .ui-dialog-buttonpane .ui-dialog-buttonset button{
+    background: #973129 !important;
+    border-color: #973129;
+    &:hover{
+        background: #b0473e !important;
+        border-color: #b0473e;
+    }
+    &:last-child{
+        color: #4a4a4a;
+        border: 1px solid #4a4a4a !important;
+        background: #fff !important;
+        &.ui-state-hover,
+        &:hover{
+            background: #e2e2e2 !important;
+            border: 1px solid #e2e2e2 !important;
+        }
+    }
+}
+

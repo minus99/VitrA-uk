@@ -1,0 +1,20 @@
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    .urunKiyaslamaIcerik{
+        > table{
+            > tbody{
+                > tr{
+                    display: table-row !important;
+                    width: 100% !important;
+                    > td{
+                        width: 20% !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .ems-grid-favorite .ems-grid-img a{
+        display: inline;
+    }
+
+}

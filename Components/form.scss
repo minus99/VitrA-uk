@@ -1,0 +1,538 @@
+//-------------------------------------------//
+//----- FORM ELEMENTS DEFAULT
+//-------------------------------------------//
+input, textarea, select{
+    outline: 0 !important;
+    box-shadow: 0 !important;
+
+    color: $cl3;
+    font-size: 16px;
+
+    width: 100%;
+    
+    display: inline-block;
+    vertical-align: middle;
+}
+
+//-------------------------------------------//
+//----- INPUT STYLE
+//-------------------------------------------//
+input:not([type="checkbox"]):not([type="radio"]){
+    height: 48px;
+    padding: 10px 16px;
+    border: 1.35px solid $cl13;
+    background-color: $cl8;
+    
+    &:focus{
+        border: 1.35px solid #003a5c;
+    }
+
+    &[id$="txtUYM_TELEFON"]{
+        width: 100% !important;
+    }
+}
+
+//-------------------------------------------//
+//----- TEXTAREA STYLE
+//-------------------------------------------//
+textarea{
+    width: 100% !important;
+    height: 240px;
+    padding: 16px;
+    border: 1.35px solid $cl13;
+    background-color: $cl8;
+    resize: none;
+
+    &:focus{
+        border: 1.35px solid #003a5c;
+    }
+}
+
+//-------------------------------------------//
+//----- SELECT STYLE
+//-------------------------------------------//
+select{
+    border: 1.35px solid $cl13;
+    background-color: $cl8;
+    &:not(.ui-datepicker-month):not(.ui-datepicker-year){
+        padding: 10px 16px;
+        &:focus{
+            border: 1.35px solid #003a5c;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- STYLER SELECT STYLE
+//-------------------------------------------//
+.sStylerWrp_select{
+    &.sStylerMainWrp{
+        position: relative;
+        display: block;
+    }
+    .sStylerWrp{
+        position: relative;
+        width: 100%;
+        height: 48px;
+        border: 1.35px solid $cl13;
+        //background-color: $cl8;
+        background-color: $white;
+        padding: 10px 36px 10px 16px;
+        display: flex;
+        align-items: center;
+
+        white-space: nowrap;
+        overflow: hidden;
+
+        &:after{
+            position: absolute;
+            right: 16px;
+            top:50%;
+            transform: translateY(-50%);
+            @extend [class^="icon-"];
+            @extend .icon-asagi:before;
+            font-size: 8px;
+        }
+        .sStyleHolder{
+            overflow: hidden;
+        }
+    }
+    select{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        height: 48px;
+        width: 100% !important;
+    }
+}
+
+.sStylerWrp_checkbox{
+    display: inline-flex;
+    align-items: center;
+}
+
+//-------------------------------------------//
+//----- CHECKBOX AND RADIO STYLE
+//-------------------------------------------//
+input[type="checkbox"], input[type="radio"]{
+    -webkit-appearance: none;
+    border: 1px solid $cl13;
+    background-color: $cl8;
+    transition: background .2s ease;
+}
+
+//-------------------------------------------//
+//----- CHECKBOX STYLE
+//-------------------------------------------//
+input[type="checkbox"]{
+    width: 16px !important;
+    height: 16px;
+    padding: 0;
+}
+input[type="checkbox"]:checked{
+    border-color: $cl13;
+    background-color: $cl6;
+}
+
+.check-item{
+    cursor: pointer;
+}
+
+//-------------------------------------------//
+//----- RADIO STYLE
+//-------------------------------------------//
+input[type="radio"]{
+    width: 16px !important;
+    height: 16px;
+    border-radius: 50%;
+    padding: 0;
+}
+input[type="radio"]:checked{
+    border-color: $cl13;
+    background-color: $cl6;
+}
+
+//-------------------------------------------//
+//----- EMS FORM STYLE
+//-------------------------------------------//
+.ems-form-label{
+    pointer-events: none;
+    
+    color: #003a5c;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 29px;
+    margin-bottom: 3px;
+}
+.ems-form-obj{
+    .checkbox{
+        display: inline-block;
+        font-size: 0;
+        float: left;
+        margin-right: 10px;
+        margin-top: 4px;
+        + span{
+            font-size: 13px;
+        }
+    }
+    &.obj-chck{
+        display: flex;
+        input{
+            margin-right: 9px;
+            + span{
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+    }
+}
+.ems-form-err{
+    .ems-form-label{
+        color: $error;
+    }
+    .ems-form-obj{
+        input:not([type="checkbox"]):not([type="radio"]),
+        select,
+        textarea{
+            border: 1.35px solid $error;
+        }
+    }
+}
+.zorunluFont{
+    &:before{
+        content: "*";
+        margin-right: 2px;
+    }
+}
+
+//-------------------------------------------//
+//----- CUSTOM DROPDOWN
+//-------------------------------------------//
+.ddWrapper {
+    .ddTitle {
+        position: relative;
+        display: block;
+        background: $white;
+        padding: 22px;
+        //color: $primary;
+        cursor: pointer;
+        @include user-select(none);
+        i {
+            $size: 16px;
+            font-size: $size;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            margin-top: -$size / 2;
+            transition: transform .4s cubic-bezier(0.8, 0, 0.5, 1);
+        }
+    }
+    .ddContent {
+        display: none;
+    }
+    &.opened {
+        .ddTitle {
+            i {
+                transform: rotate(180deg);
+            }
+        }
+        .ddContent {
+            display: block;
+        }
+    }
+}
+
+
+//-------------------------------------------//
+//----- ERROR STYLE
+//-------------------------------------------//
+.ems-message{
+    width: 100%;
+    font-family: $defaultFont;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+    @extend .uk-alert;
+
+    &:empty{
+        display: none;
+    }
+    &.ems-message-error{
+        @extend .uk-alert-danger;
+    }
+    &.ems-message-success{
+        @extend .uk-alert-success;
+    }
+    &.ems-message-info{
+        background: #{#000}1;
+        color: $cl3;
+    }
+}
+
+
+//-------------------------------------------//
+//----- CAPTCHA STYLE
+//-------------------------------------------//
+/*
+[id$="plhMesajCaptcha1"]{
+    [id$="divCaptcha"]{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        br{
+            display: none;
+        }
+        #imgCaptcha{
+            order: 1;
+            height: 50px;
+        }
+        [id$="lbfUYE_KONTROLKODU"]{
+            order: 3;
+            width: 100%;
+            margin-top: 16px;
+            @extend .ems-form-label;
+        }
+        [id$="txtUYE_KONTROLKODU"]{
+            order: 4;
+        }
+        .captchaYenile{
+            order: 2;
+            display: inline-block !important;
+            font-size: 0;
+            margin-left: 16px;
+            &:after{
+                @extend [class^="icon-"];
+                @extend .icon-refresh:before;
+                font-size: 16px;
+                color: $cl3;
+            }
+        }
+    }
+}
+*/
+[id$="divCaptcha"]{
+    display: flex;
+    position: relative;
+    #imgCaptcha{
+        width: 200px;
+    }
+    [id$="txtUYE_KONTROLKODU"]{
+        padding: 25px 10px 6px !important;
+    }
+
+    [id$="lbfUYE_KONTROLKODU"]{
+        position: absolute;
+        left: 210px;
+        top: 6px;
+        transform: translateY(0);
+
+
+        font-size: 16px;
+        color: $cl7;
+
+        transition: all .2s ease-in-out;
+        pointer-events: none;
+    }
+    
+    .captchaYenile,
+    br{
+        display: none;
+    }
+}
+
+.control-code{
+    [id$="divCaptcha"]{
+        #imgCaptcha,
+        [id$="txtUYE_KONTROLKODU"]{
+        }
+
+        [id$="lbfUYE_KONTROLKODU"]{
+            top: 50%;
+            transform: translateY(-65%);
+        }
+        
+        .captchaYenile,
+        br{
+            display: none !important;
+        }
+    }
+    &.is-active{
+        [id$="divCaptcha"]{
+            [id$="lbfUYE_KONTROLKODU"]{
+                top: 6px;
+                transform: translateY(0);
+                font-size: 12px;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-large) {
+    [id$="divCaptcha"]{
+        flex-wrap: wrap;
+        #imgCaptcha {
+            margin-bottom: 10px;
+        }
+        [id$="lbfUYE_KONTROLKODU"]{
+        left: 10px;
+        }
+    }
+    .control-code {
+        [id$="divCaptcha"]{
+            [id$="lbfUYE_KONTROLKODU"]{
+               transform: translateY(65%);
+            }
+        }
+        &.is-active{
+            [id$="divCaptcha"]{
+                [id$="lbfUYE_KONTROLKODU"] {
+                    top: calc(50% + 8px);
+                }
+            }
+        }
+    }
+}
+
+
+
+//-------------------------------------------//
+//----- DATEPICKER STYLE
+//-------------------------------------------//
+body{
+    .ui-datepicker{
+        position: relative;
+        font-family: $defaultFont;
+        width: 224px;
+        background: #fff;
+        border: none;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        box-shadow: 0 1px 3px #252525;
+        padding: 0;
+        z-index: 10000 !important;
+        @media screen and(max-width: $breakpoint-large){
+            font-family: "proximaLight";
+            width: 224px !important;
+            background: #fff;
+            border: none;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -webkit-box-shadow: 0 1px 3px #252525;
+            box-shadow: 0 1px 3px #252525;
+            padding: 0 !important;
+            z-index: 10000 !important;
+            left: 35% !important;
+        }
+        .ui-datepicker-header{
+            border: none;
+            border-bottom: 1px solid #973129;
+            background: transparent;
+            font-weight: normal;
+            font-size: 11px;
+            text-transform: uppercase;
+            border-radius: 0;
+            .ui-state-hover {
+                background: transparent;
+                border-color: transparent;
+                cursor: pointer;
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+            }
+        }
+        .ui-datepicker-title{
+            margin: 0 !important;
+            select{
+                background-color: transparent;
+                padding: 0 10px;
+                margin: 0;
+                height: 30px;
+                border: none;
+                line-height: 30px;
+                color: $cl3;
+                option{
+                    color: #252525;
+                }
+            }
+        }
+        .ui-datepicker-next,
+        .ui-datepicker-prev{
+            top: 10px;
+            border: none;
+            background: #666;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border-radius: 0 !important;
+            .ui-datepicker-next-hover,
+            .ui-datepicker-prev-hover{
+                top: 10px;
+                border: none;
+                background: #666;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                border-radius: 0 !important;
+            }
+            &:before{
+                display: block;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                color: #efefef;
+                @extend [class*=" icon-"];
+            }
+            span{
+                display: none;
+            }
+        }
+        .ui-datepicker-next{
+            right: -30px;
+            background: #333 !important;
+            &:before{
+                @extend .icon-ileri; 
+            }
+        }
+        .ui-datepicker-prev{
+            left: -30px;
+            background: #333 !important;
+            &:before{
+                @extend .icon-geri; 
+            }
+        }
+        table {
+            table-layout: fixed;
+            color: $cl3;
+            width: 94%;
+            margin: 3%;
+            th {
+                text-transform: uppercase;
+                padding: 10px 5px;
+            }
+            td {
+                .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+                    background: transparent;
+                    border: none;
+                    text-align: center;
+                    padding: 5px;
+                    margin: 0;
+                    font-weight: normal;
+                    color: $cl3;
+                    font-size: 12px;
+                    border-radius: 0;
+                    &:hover {
+                        background: #95a5a6;
+                        border-radius: 0;
+                        -webkit-border-radius: 0;
+                        -moz-border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,373 @@
+//-------------------------------------------//
+//----- MINI COMPARE
+//-------------------------------------------//
+.compareHolder{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background: #f9f9f9;
+    border-top: 3px solid #973129;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 8px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all .2s cubic-bezier(0.25, 0.75, 0.25, 0.75);
+    .compareMenuHolder,
+    .compareContent{
+        @extend .uk-container;
+    }
+
+    .compareMenu{
+        position: relative;
+        padding-top: 8px;
+        .openCloseBtn{
+            position: absolute;
+            left: -16px;
+            top: 0;
+            transform: translate(-100%, -100%);
+            background: #973129;
+            padding: 2px 8px;
+            color: #fff;
+            cursor: pointer;
+            user-select: none;
+            .addItems{
+                display: inline-block;
+                transition: all .5s cubic-bezier(0.8, 0, 0.5, 1);
+                i{
+                    font-size: 0;
+                    &::before{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    li[rel="compareList"]{
+        display: flex;
+        align-items: center;
+        .tabBtn{
+            order: 1;
+            small{
+                width: 20px;
+                height: 20px;
+                background: #973129;
+                color: #fff;
+                display: inline-block;
+                border-radius: 50%;
+                line-height: 18px;
+                text-align: center;
+                margin-left: 3px;
+            }
+        }
+        .btnCompare{
+            order: 3;
+        }
+        .btnClear{
+            order: 2;
+            margin-left: auto;
+            margin-right: 16px;
+            background: none;
+            color: #4a4a4a;
+            border-color: #4a4a4a;
+        }
+    }
+
+
+    .compareContent{
+        max-height: 0;
+        overflow: hidden;
+        transition: all .5s cubic-bezier(0.8, 0, 0.5, 1);
+        .emosInfinite{
+            display: flex;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+        }
+        .ems-prd{
+            width: 25%;
+            border-right: 1px solid #e0e0e0;
+            padding: 8px;
+            .ems-prd-inner{
+                display: flex;
+                .ems-prd-image{
+                    height: 100%;
+                    a{
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                    }
+                    img{
+                        max-height: 60px;
+                    }
+                }
+                .ems-prd-name{
+                    font-size: 13px;
+                }
+                .ems-brand-name{
+                    font-size: 11px;
+                }
+                .ems-prd-compare{
+                    display: none;
+                }
+
+                .ems-prd-content-bottom{
+                    padding-left: 8px;
+                }
+            }
+            &:nth-child(4){
+                border: 0;
+            }
+        }
+    }
+}
+
+
+
+//.compare-no-result{
+//    .compareHolder{
+//        transform: translateY(100%);
+//        opacity: 0;
+//    }
+//}
+
+
+.compare-prd-active{
+    .compareHolder{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.show-compare{
+    .compareHolder{
+        .compareContent{
+            padding-top: 8px;
+            max-height: 84px;
+            overflow: inherit;
+        }
+        .compareMenu{
+            .openCloseBtn{
+                .addItems{
+                    transform: rotate(180deg)
+                }
+            }
+        }
+    }
+}
+    
+
+//-------------------------------------------//
+//----- COMPARE PAGE
+//-------------------------------------------//
+.ems-page-compare{
+    .design-your-bathroom{
+        display: none;
+    }
+}
+
+.page-compare{
+    @extend .uk-container;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 60px;
+}
+
+.urunKiyaslama{
+    
+}
+
+.urunKiyaslamaBaslik{
+    display: flex;
+    margin-bottom: 32px;
+    margin-right: 16px;
+    .urunKiyaslama_btnListeDon{
+        display: inline-flex;
+        margin-left: auto;
+        > table{
+            display: inline-block !important;
+        }
+    }
+    .urunKiyaslama_urunSec{
+        display: none;
+    }
+
+    .btnKiyaslamaListemeDon{
+        @extend .btn-reset;
+        background: none !important;
+        border-color: none !important;
+        color: $cl6 !important;
+        > span{
+            display: flex;
+        }
+        span{
+            color: $cl6;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 32px;
+        }
+        i{
+            font-size: 0;
+            margin-left: 16px;
+            &:before{
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+.urunKiyaslamaIcerik{
+    display: inline-block;
+    width: 100%;
+    > table{
+        display: flex;
+        width: 100%;
+        border-spacing: 16px;
+        > tbody{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            > tr{
+                display: flex;
+                width: 100%;
+                margin-bottom: 8px;
+                @extend .uk-grid;
+                > td{
+                    height: auto;
+                    @extend .uk-width-1-5;
+                    
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+                &:nth-child(odd){
+                    .urunKiyaslamaOrta{
+                        position: relative;
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 16px;
+                            width: calc(100% - 16px);
+                            height: 100%;
+                            z-index: -1;
+                            background-color: #F6F6F6;
+                        }
+                    }
+                }
+                &:nth-child(even){
+                    .urunKiyaslamaOrta{
+                        position: relative;
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 16px;
+                            width: calc(100% - 16px);
+                            height: 100%;
+                            z-index: -1;
+                            background-color: #E3E3E3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .urunKiyaslamaOzellikGrup {
+        display: none;
+    }
+
+    .urunKiyaslamaOzellik{
+        > td{
+            padding-left: 24px !important;
+        }
+        .urunKiyaslamaGrup{
+            text-align: right;
+            color: $cl3;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 32px;
+            cursor: default;
+        }
+        .urunKiyaslamaOrta{
+            color: $cl3;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 32px;
+            cursor: default;
+            position: relative;
+        }
+        /*
+        &.certificates{
+            display: none !important; 
+        }
+        */
+    }
+}
+
+.urunKiyaslamaUrun{
+    border: 1px solid rgba(151,151,151,0.32);
+    padding: 16px;
+    position: relative;
+    height: 100%;
+    .urunKiyaslamaUrun_resim{
+        max-width: 176px;
+        max-height: 176px;
+        overflow: hidden;
+        a{
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .urunKiyaslamaUrun_urnAd{
+        margin-top: 16px;
+        text-align: center;
+    }
+    .urunKiyaslamaUrun_fiyat{
+        display: none;
+    }
+    .urunKiyaslamaUrun_btnKiyaslamaRemove{
+        display: inline-block;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        > table{
+            display: inline-block !important;
+        }
+        .btnKiyaslamaRemove{
+            @extend .btn-reset;
+            font-size: 8px;
+            color: $cl15;
+        }
+    }
+}
+
+
+
+@media (max-width: $breakpoint-large) {
+    .urunKiyaslamaIcerik{
+        overflow: auto;
+        > table{
+            width: auto;
+            min-width: 500px;
+            > tbody{
+                > tr{
+                    > td{
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        .urunKiyaslamaOzellik{
+            .urunKiyaslamaGrup{
+                line-height: 25px;
+            }
+            .urunKiyaslamaOrta{
+                line-height: 25px;
+            }
+        }
+    }
+
+}

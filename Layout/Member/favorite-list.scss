@@ -1,0 +1,316 @@
+//-------------------------------------------//
+//----- PAGE SPECIFIC
+//-------------------------------------------//
+.ems-member-favorite-list{
+    .product-for-you{
+        margin-bottom: 64px;
+    }
+}
+
+//-------------------------------------------//
+//----- IN PAGE
+//-------------------------------------------//
+.ems-member-favorite{
+}
+
+//-------------------------------------------//
+//----- FAVORIE LIST AND FILES LIST
+//-------------------------------------------//
+.ems-grid-favorite, .ems-grid-files{
+    padding-top: 28px;
+    .ems-grid-img{
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 139px;
+            overflow: hidden;
+            &:empty{
+                display: none;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .ems-grid-name > a{
+        color: $cl3;    
+        font-size: 18px;
+        line-height: 33px;
+    }
+    .ems-grid-links{
+        text-align: right;
+        a{
+            color: $cl6;
+            font-size: 14px;
+            line-height: 25px;
+
+            min-width: auto;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+    }
+}
+.brackets{
+    &:before{
+        content: "|";
+        display: inline-block;
+        margin: 0 5px;
+        color: $cl6;
+        font-size: 14px;
+    }
+}
+
+
+//-------------------------------------------//
+//----- ADD FAVORIE GROUP -> DROP
+//-------------------------------------------//
+.ems-prd-add-fav,
+.ems-add-favorite-group-wrp{
+    position: relative;
+    .ems-afg-drop{
+        width: 240px;
+        height: 210px;
+        padding: 16px 24px;
+        background-color: $white;
+        box-shadow: 0 0 16px 0 rgba(0,0,0,0.16);
+        top: 50% !important;
+        left: initial !important;
+        right: 100%;
+        transform: translate(-3%, -50%);
+
+        text-align: left;
+        &:before{
+            content: "";
+            display: inline-block;
+            border-width: 8px 0px 8px 9px;
+            border-style: solid;
+            border-color: #{#000}0 #{#000}0 #{#000}0 $white;
+
+            position: absolute;
+            right: -7px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- DASHBOARD.aspx ADD FAVORIE GROUP -> DROP
+//-------------------------------------------//
+.ems-last-favorites{
+    .ems-add-favorite-group-wrp{
+        .ems-afg-drop{
+            left: 100% !important;
+            right: initial !important;
+            transform: translate(-3%, -50%);
+            &:before{
+                border-width: 8px 9px 8px 0px;
+                border-color: #{#000}0 $white #{#000}0 #{#000}0 ;
+                left: -7px;
+                right: auto;
+            }
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- PRODUCT DETAIL ADD FAVORIE GROUP -> DROP
+//-------------------------------------------//
+.ems-prd-compare-and-fav{
+    .ems-prd-add-fav{
+        .ems-afg-drop{
+            display: none !important;
+        }
+        &.selected:hover{
+            .ems-afg-drop{
+                display: block !important;
+                left: 100% !important;
+                right: initial !important;
+                transform: translate(-3%, -50%) !important;
+                &:before{
+                    border-width: 8px 9px 8px 0px;
+                    border-color: #{#000}0 $white #{#000}0 #{#000}0 ;
+                    left: -7px;
+                    right: auto;
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    left: -20px;
+                    top: 0;
+                    height: 100%;
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+//-------------------------------------------//
+//----- FAVORITE BATHROOM
+//-------------------------------------------//
+/*.ems-favorite-tab-control{
+    display: flex;
+    border-bottom: 3px solid $cl6;
+    > li{
+        padding: 15px 30px;
+        font-size: 16px;
+        &.uk-active{
+            background: $cl6;
+            color: $white;
+        }
+    }
+}*/
+//-------------------------------------------//
+//----- FAVORITE BATHROOM
+//-------------------------------------------//
+.ems-favorite-tab-control{
+    display: flex;
+    border: 2px solid $cl6;
+    margin-bottom: 24px;
+    > li{
+        width: 50%;
+        text-align: center;
+        display: flex;
+        a{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: $cl6;
+        }
+        &.uk-active{
+            background: $cl6;
+            a{
+                color: $white;
+            }
+        }
+    }
+}
+
+.ems-grid-favorite-bathroom{
+    .ems-grid-favorite-bathroom-inner{
+        > div{
+            margin-bottom: 16px;
+        }
+    }
+    .ems-grid-name{
+        margin-top: 10px;
+        > a{
+            font-weight: 500;
+            color: $cl7;
+            line-height: 1;
+        }
+    }
+    .ems-grid-links{
+        text-align: left;
+    }
+}
+
+
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- PAGE SPECIFIC
+    //-------------------------------------------//
+    .ems-member-favorite-list{
+        .product-for-you{
+            margin-bottom: 16px !important;
+        }
+        
+        .design-your-bathroom{
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        //-------------------------------------------//
+        //----- GRID ROW
+        //-------------------------------------------//
+        .ems-grid-row + .ems-grid-row{
+            margin-top: 10px;
+        }
+    }
+    //-------------------------------------------//
+    //----- IN PAGE
+    //-------------------------------------------//
+    .ems-member-favorite{
+        position: relative;
+        z-index: 10;
+    }
+
+    //-------------------------------------------//
+    //----- FAVORIE LIST
+    //-------------------------------------------//
+    .ems-grid-favorite{
+        padding-top: 0px;
+        .col{
+            align-items: flex-start;
+        }
+        .ems-grid-img{
+            padding-top: 10px;
+            a{
+                height: 46px;
+            }
+        }
+        .ems-grid-name > a{
+            font-size: 16px;
+            line-height: 29px;
+        }
+        .ems-grid-links{
+            text-align: left;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- ADD FAVORIE GROUP -> DROP
+    //-------------------------------------------//
+    .ems-prd-add-fav,
+    .ems-add-favorite-group-wrp{
+        .ems-afg-drop{
+            top: 100% !important;
+            top: 100% !important;
+            right: 50%;
+            transform: translate(50%, 10%);
+            &:before{
+                border-width: 0px 8px 8px 9px;
+                border-color: #{#000}0 #{#000}0 $white #{#000}0;
+                right: 50%;
+                top: -7px;
+                transform: translate(50%,0);
+            }
+        }
+    }
+
+
+
+    //-------------------------------------------//
+    //----- FAVORITE BATHROOM
+    //-------------------------------------------//
+    .ems-favorite-tab-control{
+        border: 2px solid $cl6;
+        margin-bottom: 24px;
+        > li{
+            width: 50%;
+            text-align: center;
+        }
+    }
+
+    .ems-grid-favorite-bathroom{
+        .ems-grid-img{
+            > a{
+                height: 200px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,102 @@
+//-------------------------------------------//
+//----- PRODUCT DETAIL HOLDER
+//-------------------------------------------//
+.urunDetay{
+    margin-top: 32px;
+}
+
+
+//-------------------------------------------//
+//----- PRODUCT FEATURE
+//-------------------------------------------//
+.gridUrunOzellik{
+    .tableTitleUrunOzellik{
+        display: none;
+        font-size: 0;
+        text-align: left !important;
+        margin-bottom: 32px;
+        &:before{
+            content: $lbf_TeknikOzellikler;
+            color: $cl7;
+            font-size: 32px;
+            font-weight: 700;
+        }
+    }
+    table{
+        width: 100%;
+        tbody{
+            tr{
+                display: flex;
+                padding: 14px 0;
+                //border-bottom: 1px solid #{$cl15}60;
+                border-bottom: 1px solid #{$cl15};
+                .gridUrunOzellikDetayBaslik{
+                    display: inline-flex;
+                    width: 50% !important;
+                }
+                .gridUrunOzellikDetayIcerik{
+                    display: inline-flex;
+                    justify-content: flex-end;
+                    //text-align: right;
+                    width: 50% !important;
+                    
+                }
+                a{
+                    display: none;
+                }
+                &:last-child{
+                    border: 0;
+                }
+            }
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- PRODUCT DOWNLOAD DOCUMENTS
+//-------------------------------------------//
+.tableUrunDokuman,{
+    display: none;
+}
+
+.download-files-group{
+    &-head{
+    }
+    &-body{
+        .download-files-item{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 16px 0;
+            border-bottom: 1px solid #{$cl15};
+
+            color: $cl3;
+            font-size: 14px;
+
+            .type{
+                margin-left: 16px;
+            }
+            .name{
+                margin-left: 4px;
+            }
+            .link{
+                margin-left: auto;
+            }
+
+            .icon-dosya-genel,
+            .icon-tumunu-indir{
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- PRODUCT DETAIL HOLDER
+    //-------------------------------------------//
+    .urunDetay{
+        margin-top: 18px;
+    }
+}

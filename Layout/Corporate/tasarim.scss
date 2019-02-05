@@ -1,0 +1,113 @@
+//-------------------------------------------//
+//----- DESIGN INNER
+//-------------------------------------------//
+.ems-page-design-inner{
+    
+    .designers-wrapper{
+
+        .designers-title{
+            color: $cl7;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        //-------------------------------------------//
+        //----- DESIGNER INFO
+        //-------------------------------------------//
+        .designer-name{
+            color: $cl7;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 44px;
+            margin-bottom: 20px;
+        }
+        .designer-info{
+            color: $cl3;
+            font-size: 14px;
+            line-height: 24px;
+        }
+        .more-design{
+            margin-top: 15px;
+            color: $cl6;
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        .designer-item{
+            margin: 15px 0;
+        }
+        //-------------------------------------------//
+        //----- DESIGNER COLLECTIONS
+        //-------------------------------------------//
+        .designer-collections{
+            margin-top: 8px;
+            margin-left: calc(100% * 1 / 6.001);
+        }
+        .dwc-title{
+            color: $cl7;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .dwc-group{
+            ul{
+                @extend .uk-grid;
+                li{
+                    @extend .uk-width-1-6\@m;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                }
+            }
+            a{
+                color: $cl6;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-large) {
+
+    //-------------------------------------------//
+    //----- DESIGN INNER
+    //-------------------------------------------//
+    .ems-page-design-inner{
+        
+        .designers-wrapper{
+
+            .designers-title{
+                color: $cl6;
+                font-size: 20px;
+            }
+
+            .designer-item{
+                margin-bottom: 26px;
+            }
+            
+            //-------------------------------------------//
+            //----- DESIGNER INFO
+            //-------------------------------------------//
+            .designer-name{
+                color: $cl3;
+                font-size: 16px;
+                line-height: 26px;
+                margin-bottom: 7px;
+            }
+            .designer-info{
+            }
+            .more-design{
+                margin-top: 15px;
+                color: $cl6;
+                font-size: 14px;
+                line-height: 25px;
+            }
+
+            //-------------------------------------------//
+            //----- DESIGNER COLLECTIONS
+            //-------------------------------------------//
+            .designer-collections{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+//-------------------------------------------//
+//----- CART TYPE 1
+//-------------------------------------------//
+.card-type1{
+    .uk-card{
+        border: 1px solid $cl13;
+        box-shadow: none !important;
+    }
+    .item-content{
+        padding: 16px 16px 55px;
+        .item-title{
+            color: $cl6;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+        .item-brief-desc{
+            color: $cl3;
+            font-size: 14px;
+            line-height: 24px;
+
+            height: 100px;
+            overflow: hidden;
+        }
+        .item-link{
+            color: $cl6;
+            font-size: 16px;
+            line-height: 29px;
+
+            margin-top: 8px;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- CART TYPE 2
+//-------------------------------------------//
+.card-type2{
+    .uk-card{
+        box-shadow: none !important;
+    }
+    .item-content{
+        padding: 16px 0 32px;
+        .item-title{
+            color: $cl6;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 44px;
+        }
+        .item-brief-desc{
+            color: $cl3;
+            font-size: 14px;
+            line-height: 24px;
+
+            height: 70px;
+            overflow: hidden;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- CART TYPE 1
+    //-------------------------------------------//
+    .card-type1{
+        .item-content{
+            .item-title{
+                font-size: 20px;
+                line-height: 24px;
+            }
+            .item-link{
+                width: 100%;
+                border: 1px solid $cl3;
+                color: $cl3;
+                text-align: center;
+                text-transform: capitalize;
+                &:hover{
+                    background: #e2e2e2;
+                    border-color: #e2e2e2;
+                    color: #4a4a4a;
+                }
+                &:focus{
+                    background: #b1b1b1;
+                    border-color: #b1b1b1;
+                    color: #4a4a4a;
+                }
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- CART TYPE 2
+    //-------------------------------------------//
+    .card-type2{
+        .item-content{
+            padding: 10px 0 24px;
+            .item-title{
+                font-size: 20px;
+                line-height: 36px;
+            }
+            .item-brief-desc{
+                height: 72px;
+            }
+        }
+    }
+}

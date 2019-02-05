@@ -1,0 +1,225 @@
+[id$="CEPTELEFONALAN"] {
+    width: 25% !important;
+    margin-right: 3%;
+}
+[id$="CEPTELEFON"] {
+    width: 72% !important;
+}
+
+.page-login {
+    position: relative;
+    .ems-login,
+    .ems-signup {
+        position: relative;
+        display: none;
+        .cover-img-height {
+            min-height: calc(100vh - 96px);
+        }
+    }
+    + footer{
+        .design-your-bathroom{
+            display: none;
+        }
+    }
+}
+
+.go-to-login-active {
+    .ems-signup,
+    footer {
+        @extend .uk-hidden;
+    }
+    .ems-login {
+        @extend .uk-display-block;
+    }
+}
+.go-to-signup-active {
+    .ems-login {
+        @extend .uk-hidden;
+    }
+    .ems-signup{
+        @extend .uk-display-block;
+    }
+    .page-login{
+        .row-2 {
+            display: none;
+        }
+    }
+}
+
+.ems-login-error:empty {
+    @extend .uk-hidden;
+}
+
+.ems-login-header,
+.ems-signup-header {
+    font-size: 32px;
+    color: $cl3;
+    font-weight: 700;
+    line-height: 1.15;
+    @extend .uk-margin-bottom;
+}
+.ems-signup-header {
+    font-size: 64px;
+}
+.ems-login-footer,
+.ems-signup-footer {
+    @extend .uk-hidden;
+}
+
+a.btnLogin,
+a.btnYeniUyeKaydet {
+    @extend .uk-display-block;
+}
+.pageLogin_btnFacebookLogin {
+    table {
+        display: table !important;
+        width: 100%;
+    }
+    .btnFacebookLogin {
+        @extend .uk-display-block;
+        $fb: #3B5998;
+        background: $fb !important;
+        border-color: $fb !important;
+    }
+}
+
+.login-cover-img,
+.signup-cover-img {
+    &:before {
+        content: "";
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+}
+.login-cover-img {
+    &:before {
+        background-image: url(/upload/arguments/login-demo-1.png);
+        left: 0;
+    }
+}
+.signup-cover-img {
+    &:before {
+        background-image: url('/images/frontend/vitrapro/hemen-VitrA-pro-uyesi-olun.jpg');
+        background-position: center;
+        right: 0;
+        width: 45%;
+    }
+}
+
+.new-user-info {
+    @extend .uk-hidden;
+    .new-user-info-append & {
+        @extend .uk-display-block;
+    }
+    .uk-section {
+        position: relative;
+        &:nth-child(odd) {
+            background-color: $cl5;
+        }
+        &:nth-child(even) {
+            background-color: $white;
+        }
+    }
+    .uk-text-large {
+        font-size: 40px;
+        color: $cl6;
+        font-weight: 700;
+        line-height: 1.14;
+    }
+    .section-1 {
+        .uk-text-large {
+            font-size: 64px;
+            color: $cl3;
+        }
+        .uk-text-small {
+            font-size: 20px;
+        }
+    }
+    .section-5 {
+        background-color: none;
+        height: 440px;
+    }
+}
+
+.section-99 {
+    position: relative;
+    background-color: $cl5;
+}
+
+//sifremi unuttum
+.pageDefault {
+    @extend .uk-container;
+    @extend .uk-margin-large-bottom;
+}
+.pageHeaderDefault {
+    @extend .page-top-title;
+}
+.pageDescDefault {
+    @extend .uk-margin-bottom;
+}
+
+.tableSifremiUnuttum {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 50px;
+    th, td, [id$="lbfUYE_KONTROLKODU"] {
+        display: block;
+        padding: 5px 0;
+        text-align: left;
+        font-weight: 500;
+        &:empty {
+            display: none;
+        }
+    }
+    [id$="divCaptcha"] {
+        br {
+            display: none;
+        }
+    }
+}
+
+.pageSifremiUnuttum_mesaj {
+    @extend .ems-message;
+    @extend .ems-message-success;
+}
+
+//basarili uyelik
+.pageUyeBasarili {
+    .page-title-user {
+        font-size: inherit;
+        color: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        margin-bottom: inherit;
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    .ems-login-header,
+    .ems-signup-header {
+        font-size: 24px;
+    }
+    .uk-section {
+        &.uk-background-contain {
+            background-size: cover;
+        }
+    }
+    .new-user-info {
+        .uk-text-large {
+            font-size: 20px;
+        }
+        .section-1 {
+            background: none !important;
+            .uk-text-large {
+                font-size: 20px;
+            }
+        }
+        .section-5{
+            height: 190px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+//-------------------------------------------//
+//----- ICOMOON
+//-------------------------------------------//
+@include fontFace('icomoon', '/styles/fonts/icomoon/icomoon', normal, normal);
+
+
+//-------------------------------------------//
+//----- PALANQUIN
+//-------------------------------------------//
+@include fontFace('palanquin', '/styles/fonts/palanquin/palanquin-thin-webfont', 100, normal);
+@include fontFace('palanquin', '/styles/fonts/palanquin/palanquin-extralight-webfont', 200, normal);
+@include fontFace('palanquin', '/styles/fonts/palanquin/palanquin-light-webfont', 300, normal);
+@include fontFace('palanquin', '/styles/fonts/palanquin/palanquin-regular-webfont', 400, normal);
+@include fontFace('palanquin', '/styles/fonts/palanquin/palanquin-medium-webfont', 500, normal);
+@include fontFace('palanquin', '/styles/fonts/palanquin/palanquin-semibold-webfont', 600, normal);
+@include fontFace('palanquin', '/styles/fonts/palanquin/palanquin-bold-webfont', 700, normal);

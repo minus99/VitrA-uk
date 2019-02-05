@@ -1,0 +1,138 @@
+.ems-page-product-detail,
+.ems-page-product-detail-v2{
+    //-------------------------------------------//
+    //----- TABS CONTROL
+    //-------------------------------------------//
+    .ems-prd-tab-control{
+        margin-top: 55px;
+        li{
+            align-items: flex-end;
+            height: 80px;
+            flex: 1;
+            max-width: 50%;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                color: $cl3;
+                font-size: 20px;
+                transition: box-shadow 0.5s cubic-bezier(0.19, 1, 0.22, 1), background 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            &.uk-active{
+                a{
+                    background: $white;
+                    font-size: 24px;
+                    font-weight: 500;
+                    box-shadow: 0 -8px 8px 0 rgba(0,0,0,0.08);
+                } 
+            }
+        }
+    }
+
+    .ems-prd-tab-holder{
+        box-shadow: 0 -8px 8px 0 rgba(0,0,0,0.08);
+        margin-bottom: 32px;
+        .uk-accordion{
+            > :nth-child(n+2){
+                margin-top: 0px;
+            }
+            li{
+                .uk-accordion-title{
+                    display: flex;
+                    align-items: center;
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                    border-bottom: 1px solid $cl15;
+                    &:after{
+                        display: inline-block;
+                        @extend [class^="icon-"];
+                        @extend .icon-ileri:before;
+                        margin-left: auto;
+                        transition: all 0.5s cubic-bezier(0.8, 0, 0.5, 1);
+                    }
+                }
+                .uk-accordion-content{
+                    margin-top: 32px;
+                }
+
+                &.uk-open{
+                    .uk-accordion-title{
+                        &:after{
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .ems-prd-tab-title{
+        display: none;
+        color: $cl7;
+        font-size: 32px;
+        font-weight: 700;
+        &:not(:empty){
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .prd-pdf{
+            display: inline-flex;
+            align-items: center;
+            i, span{
+                transition: all .3s;
+                color: $cl6;
+            }
+            i{
+                font-size: 24px;
+                margin-right: 5px;
+            }
+            span{
+                font-size: 14px;
+                font-weight: 400;
+                color: $cl3;
+            }
+            &:hover{
+                i,
+                span{
+                    color: $cl7;
+                }
+                span{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: $breakpoint-large) {
+    .ems-page-product-detail,
+    .ems-page-product-detail-v2{
+        .ems-prd-tab-holder{
+            margin-top: 0px;
+            margin-bottom: 16px;
+            box-shadow: none;
+        }
+
+        .ems-prd-tab-holder{
+            box-shadow: 0 -8px 8px 0 rgba(0,0,0,0.08);
+            .uk-accordion{
+                li{
+                    .uk-accordion-content{
+                        margin-top: 0px;
+                    }
+                }
+            }
+        }
+
+        .ems-prd-tab-title{
+            font-size: 22px;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+    }
+}

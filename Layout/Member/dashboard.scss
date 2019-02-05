@@ -1,0 +1,443 @@
+//-------------------------------------------//
+//----- PAGE GROUP SPECIFIC
+//-------------------------------------------//
+.ems-page-member-dashboard{
+    .ems-member-dashboard-content{
+        display: block !important;
+    }
+    .product-for-you{
+        margin-bottom: 64px !important;
+    }
+    .ems-member-wrapper{
+        padding: 40px 0;
+    }
+}
+
+//-------------------------------------------//
+//----- GENERAL CLASS
+//-------------------------------------------//
+.ems-ds-title{
+    display: flex;
+    align-items: center;
+    color: $cl3;
+    font-size: 18.76px;
+    font-weight: 700;
+    line-height: 32px;
+
+    margin-bottom: 32px;
+    i{
+        font-size: 0;
+        margin-right: 16px;
+        &:before{
+            font-size: 24px;
+        }
+    }
+}
+
+.ems-ds-more-btn{
+    display: flex;
+    align-items: center;
+    color: $cl6;
+    font-size: 14px;
+    line-height: 25px;
+    i{
+        font-size: 0;
+        margin-right: 10px;
+        &:before{
+            font-size: 32px;
+        }
+    }
+}
+
+
+//-------------------------------------------//
+//----- IN PAGE
+//-------------------------------------------//
+.ems-member-dashboard{
+    .ems-member-wrapper{
+
+    }
+}
+
+//-------------------------------------------//
+//----- LAST FAVORITE LIST
+//-------------------------------------------//
+.lastFavorite-list{
+    .lastFavorite-item{
+        border-bottom: 1px solid #{$cl15}40;
+        display: flex;
+        align-items: center;
+        padding: 5px 0;
+        &:last-child{
+            border: 0;
+            margin-bottom: 16px;
+        }
+        &-image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            overflow: hidden;
+
+            @extend .uk-width-1-4;
+        }
+        &-info{
+            padding: 8px;
+            @extend .uk-width-3-4;
+        }
+        &-name{
+            color: $cl3;
+            font-size: 14px;
+        }
+        &-actions{
+            > span{
+                + span{
+                    a{
+                        &:before{
+                            content: "|";
+                            display: inline-block;
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+            a{
+                color: $cl6;
+                font-size: 12px;
+                line-height: 22px;
+                &.btnFavoriGrupEkle{
+                    min-width: auto;
+                    background: none;
+                    border: 0;
+                    padding: 0;
+                }
+                &:hover,
+                &:focus{
+                    color: $cl6;
+                }
+            }
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- LAST PROJECTS LIST
+//-------------------------------------------//
+.favoriGroup-list{
+    .favoriGroup-item{
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #{$cl15}40;
+        &:last-child{
+            border: 0;
+            margin-bottom: 16px;
+        }
+        &-image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 16px;
+            width: 32px;
+            height: 32px;
+            img{
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+        &-name{
+            color: $cl3;
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- LAST DOCUMENTS LIST
+//-------------------------------------------//
+.lastDocuments-list{
+    .lastDocuments-item{
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #{$cl15}40;
+        &:last-child{
+            border: 0;
+            margin-bottom: 16px;
+        }
+        &-image{
+            display: inline-flex;
+            margin-right: 16px;
+            i{
+                font-size: 32px;
+            }
+        }
+        &-name{
+            color: $cl3;
+            font-size: 14px;
+            span {
+                margin-right: 4px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+        
+        &-actions{
+            > span{
+                + span{
+                    a{
+                        &:before{
+                            content: "|";
+                            display: inline-block;
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+            a{
+                color: $cl6;
+                font-size: 12px;
+                line-height: 22px;
+                &.btnFavoriGrupEkle{
+                    min-width: auto;
+                    background: none;
+                    border: 0;
+                    padding: 0;
+                }
+                &:hover,
+                &:focus{
+                    color: $cl6;
+                }
+            }
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- DASHBOARD CONTENT
+//-------------------------------------------//
+.ems-member-dashboard-content{
+    padding-top: 64px;
+    padding-bottom: 96px;
+    box-shadow: 0 -10px 10px 0 rgba(0,0,0,0.1);
+}
+
+//-------------------------------------------//
+//----- PROPOSTAL BUNDLE
+//-------------------------------------------//
+.bundle-proposal-wrp{
+    padding: 96px 0 56px;
+    .wsp-title{
+        color: $cl6;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 56px;
+        margin-bottom: 32px;
+    }
+    
+    .swiper-button-prev,
+    .swiper-button-next{
+        display: none;
+    }
+
+    .ems-prd-inner{
+        padding: 8px;
+    }
+    .ems-prd-inner-mask{
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    }
+    .ems-prd-mask{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 160px;
+        overflow: hidden;
+
+        border-bottom: 4px solid $cl6;
+    }
+    .ems-prd-content{
+        padding: 8px 8px 15px;
+    }
+
+    .ems-prd-name{
+        display: inline-flex;
+        margin-bottom: 8px;
+        a{
+            color: $cl3;
+            font-size: 14px;
+            line-height: 16px;
+            height: 32px;
+            overflow: hidden;
+        }
+    }
+
+    .ems-brand-name{
+        color: $cl14;
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .ems-prd-price{
+        color: $cl3;
+        font-size: 10px;
+        line-height: 18px;
+        span{
+            &:first-child{
+                margin-right: 5px;
+            }
+        }
+    }
+
+    
+}
+
+//-------------------------------------------//
+//----- ACTIVITY BUNDLE
+//-------------------------------------------//
+.activity-bundle{
+    margin: 64px 0;
+
+    .bundle-title{
+        color: $cl6;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 56px;
+    }
+
+    .bundle-group{
+        .bundle-item{
+            padding: 32px 0;
+
+            .item-date-loc{
+                color: $cl3;
+                font-size: 20px;
+                line-height: 36px;
+                > span{
+                    display: block;
+                }
+            }
+            .title{
+                color: $cl7;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 44px;
+            }
+            .desc{
+                color: $cl3;
+                font-size: 14px;
+                line-height: 24px;
+            }
+            .link{
+                margin-top: 32px;
+                color: $cl6;
+                font-size: 14px;
+                line-height: 25px;
+                &:empty{
+                    display: none;
+                }
+            }
+
+
+            //&:nth-child(even){
+            &:nth-child(odd){
+                background-color: $cl6;
+                .item-date-loc,
+                .title,
+                .desc,
+                .link{
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+//-------------------------------------------//
+//----- ARCHITECTURE BUNDLE
+//-------------------------------------------//
+.bundle-architecture{
+    padding: 32px 0;
+	background-color: $cl5;
+    .bundle-title{
+        color: $cl6;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 64px;
+    }
+    .bundle-desc{
+        color: $cl3;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 20px;
+        &:empty{
+            display: none;
+        }
+    }
+    .bundle-group{
+        margin-top: 36px;
+        > div{
+            padding-bottom: 20px;
+        }
+        .image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 256px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        .title{
+            color: $cl7;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 44px;
+        }
+        .desc{
+            color: $cl3;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+
+//-------------------------------------------//
+//----- DOWNLOAD DOC TYPE
+//-------------------------------------------//
+.doc-type{
+    .doc-ico{
+        position: relative;
+        .type{
+            position: absolute;
+            right: 5%;
+            bottom: 0.75em;
+            width: 2.45em;
+            font-size: .22em;
+            color: $white;
+            letter-spacing: 1.1px;
+            line-height: 1.6em;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+
+    //-------------------------------------------//
+    //----- PAGE GROUP SPECIFIC
+    //-------------------------------------------//
+    .ems-page-member-dashboard{
+        .ems-member-wrapper{
+            padding: 24px 0;
+        }
+    }
+
+}

@@ -1,0 +1,239 @@
+//-------------------------------------------//
+//----- WIDGET CUSTOMIZE
+//-------------------------------------------//
+.ems-widget{
+    //padding: 64px 0 56px;
+    .widget-title{
+        color: $cl6;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 56px;
+        &:not(:empty){
+            margin-bottom: 24px;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- WIDGET CONTROLS
+//-------------------------------------------//
+.system-widget{
+    display: none;
+    &.results-found{
+        display: block;
+    }
+}
+
+//-------------------------------------------//
+//----- WIDGET TYPE
+//-------------------------------------------//
+.widget{
+    &-product,
+    &-collection{
+        .swiper-inner{
+            margin-left: -8px;
+            width: auto;
+        }
+    }
+    //-------------------------------------------//
+    //----- PRODUCT
+    //-------------------------------------------//
+    &-product{
+        padding: 32px 0;
+        .emosInfinite{
+            .ems-prd{
+                @extend .uk-width-1-6\@m;
+                padding:8px;
+                &-inner{
+                    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+                }
+                &-image{
+                    border-bottom: 4px solid $cl6;
+                    height: 160px;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &-content-mask{
+                    padding: 8px;
+                }
+                &-name{
+                    color: $cl3;
+                    font-size: 14px;
+                    line-height: 16px;
+
+                    height: 32px;
+                    overflow: hidden;
+                }
+                &-desc{
+                    display: none;
+                    height: 32px;
+                    overflow: hidden;
+                    line-height: 1.1;
+                }
+            }
+            .ems-brand{
+                display: flex;
+            }
+            .ems-brand-name{
+                color: $cl14;
+                font-size: 12px;
+                line-height: 22px;
+
+                padding-top: 8px;
+                height: 30px;
+                overflow: hidden;
+            }
+            .ems-brand-drop{
+                display: none !important;
+            }
+        }
+    }
+    //-------------------------------------------//
+    //----- COLLECTION
+    //-------------------------------------------//
+    &-collection{
+        padding: 32px 0;
+        .emosInfinite{
+        }
+        .ems-prd{
+            @extend .uk-width-1-3\@m;
+            padding: 8px;
+            &-mask{
+                display: flex;
+            }
+            &-image{
+                display: flex;
+                width: 100%;
+                height: 256px;
+                overflow: hidden;
+                > a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    img{
+                        min-width: 100%;
+                        min-height: 100%;
+                    }
+                }
+            }
+            &-name{
+                color: $cl6;
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 23px;
+            }
+            &-desc{
+                color: $cl3;
+                font-size: 14px;
+                a{
+                    &:not(:empty){
+                        margin-top: 5px;
+                        height: 68px;
+
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &:empty{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .ems-brand,
+        .ems-prd-compare-group{
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- WIDGET CUSTOMIZE
+    //-------------------------------------------//
+    .ems-widget{
+        padding-left: 0;
+        padding-right: 0;
+        .widget-title{
+            font-size: 20px;
+            line-height: 24px;
+            padding: 0 16px;
+            &:not(:empty){
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- WIDGET TYPE
+    //-------------------------------------------//
+    .widget{
+        &-product,
+        &-collection{
+            margin-left: 0;
+            &.no-controls{
+                .emosInfinite{
+                    justify-content: center;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+        //-------------------------------------------//
+        //----- PRODUCT
+        //-------------------------------------------//
+        &-product{
+            padding: 36px 0;
+            .emosInfinite{
+                .ems-prd{
+                    width: 50%;
+                    //CONTENT
+                    &-name{
+                        color: $cl3;
+                        font-size: 14px;
+                        line-height: 16px;
+        
+                        height: 32px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        //-------------------------------------------//
+        //----- COLLECTION
+        //-------------------------------------------//
+        &-collection{
+            margin: 24px 16px;
+            .widget-title{
+                margin-left: 0;
+            }
+            .emosInfinite{
+                flex-wrap: wrap;
+            }
+            .ems-prd{
+                margin-bottom: 0;
+                &-image{
+                    height: 160px;
+                }
+                &-name{
+                    color: $cl3;
+                    font-size: 16px;
+                    margin-top: 6px;
+                }
+                &-desc{
+                    display: none;
+                }
+                + .ems-prd{
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+
+}

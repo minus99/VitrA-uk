@@ -1,0 +1,68 @@
+//-------------------------------------------//
+//----- PAGE SPECIFIC
+//-------------------------------------------//
+.ems-page-member-edit{
+}
+
+//-------------------------------------------//
+//----- EBULLETIN HOLDER
+//-------------------------------------------//
+.ebulletin-holder{
+    margin-top: 48px;
+    margin-bottom: 15px;
+    .page-title-user{
+        margin-bottom: 0;
+    }
+}
+
+//-------------------------------------------//
+//----- MEMBER INFO SEND BUTTON
+//-------------------------------------------//
+a.btnUyeBilgi{
+    margin-top: 48px;
+    min-width: 100% !important;
+}
+
+
+//-------------------------------------------//
+//----- PAGE MEMBER PASS UPDATE
+//-------------------------------------------//
+.ems-page-member-password{
+}
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- PAGE SPECIFIC
+    //-------------------------------------------//
+    .ems-page-member-edit{
+        footer{
+            display: none;
+        }
+    }
+    //-------------------------------------------//
+    //----- EBULLETIN HOLDER
+    //-------------------------------------------//
+    .ebulletin-holder{
+        margin-top: 12px;
+        margin-bottom: 40px;
+    }   
+
+    //-------------------------------------------//
+    //----- MEMBER INFO SEND BUTTON
+    //-------------------------------------------//
+    a.btnUyeBilgi{
+        margin-top: 24px;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 31px;
+    }
+
+    //-------------------------------------------//
+    //----- PAGE MEMBER PASS UPDATE
+    //-------------------------------------------//
+    .ems-page-member-password{
+        footer{
+            display: none;
+        }
+    }
+}

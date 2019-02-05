@@ -1,0 +1,34 @@
+$site-gutter : 16px;
+$site-container: 1136px;
+$site-margin-medium: 32px;
+
+//-------------------------------------------//
+//----- UIKIT THEME
+//-------------------------------------------//
+$grid-gutter-horizontal         : $site-gutter;
+$grid-gutter-vertical           : $site-gutter;
+
+$grid-gutter-horizontal-l       : $site-gutter;
+$grid-gutter-vertical-l         : $site-gutter;
+
+$container-max-width            : $site-container !default;
+
+$global-medium-gutter           : $site-gutter;
+
+$global-margin                  : $site-gutter;
+$margin-medium-margin           :  $site-margin-medium;
+
+
+@import 'src/scss/variables';
+@import 'src/scss/mixins';
+@import 'src/scss/uikit';
+ 
+
+//$global-link-color: #DA7D02;
+
+//@import "src/scss/variables-theme.scss";
+//@import "src/scss/mixins-theme.scss";
+
+//@mixin hook-card() { color: #000; }
+
+//@import "src/scss/uikit-theme.scss";

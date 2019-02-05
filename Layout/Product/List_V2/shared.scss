@@ -1,0 +1,410 @@
+.ems-series-list{
+    .ems-col-full{
+        width: 100%;
+    }
+    .ems-col-holder{
+        margin-top: 25px;
+    }
+    .kutuOzellikFiltre{
+        display: none;
+    }
+    .urunPaging_btnKiyaslama{
+        display: none;
+    }
+    .design-your-bathroom{
+        display: none;
+    }
+}
+
+//-------------------------------------------//
+//----- CATEGORY HEAD
+//-------------------------------------------//
+.series-cat-head{
+    margin-bottom: 50px;
+}
+.tab-display-1{
+    display: flex;
+    border: 1px solid $cl6;
+    li{
+        position: relative;
+        flex: 1;
+        a{
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            color: $cl6;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 44px;
+            position: relative;
+            z-index: 2;
+            transition: all .5s cubic-bezier(0.19,1,0.22,1);
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $cl6;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: background 10s cubic-bezier(0.19,1,0.22,1),-webkit-transform 1s cubic-bezier(0.19,1,0.22,1);
+        }
+        + li{
+            border-left: 1px solid $cl6;
+        }
+        &:hover{
+            border-color: $white;
+            a{
+                color: $white;
+            }
+            &:after{
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+        &.active{
+            border-color: $white;
+            a{
+                color: $white;
+            }
+            &:after{
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- ÖNE ÇIKANLAR
+//-------------------------------------------//
+.bathroom-collections-wrapper{
+    .bcw-title{
+        color: $cl7;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 56px;
+
+        margin-bottom: 8px;
+    }
+    .bcw-holder{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 528px;
+        @extend .uk-grid;
+        > div{
+            @extend .uk-width-1-3\@m;
+            height: calc(50% - 8px);
+            &:first-child{
+                @extend .uk-width-2-3\@m;
+                height: 100%;
+            }
+            &:last-child{
+                margin-top: 16px;
+            }
+            .image{
+                > .uk-background-cover{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.ems-col-list-top{
+    margin-top: 48px;
+}
+.list-title {
+    .page-title{
+        color: $cl7;
+        font-size: 32px;
+        line-height: 56px;
+    }
+}
+
+
+//-------------------------------------------//
+//----- CATEGORY SELECT
+//-------------------------------------------//
+.cats-select{
+    margin-bottom: 40px;
+    .cats-select-title{
+        display: none;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+        li{
+            border: 1px solid $cl15;
+            border-radius: 8px;
+            background-color: $white;
+            margin: 8px;
+            transition: all .5s cubic-bezier(0.19,1,0.22,1);
+            a{
+                color: $cl3;
+                font-size: 14px;
+                line-height: 25px;
+                padding: 4px 23px;
+                text-align: center;
+                transition: all .5s cubic-bezier(0.19,1,0.22,1);
+                i{
+                    font-style: normal;
+                }
+            }
+            &:first-child{
+                a{
+                    //min-width: 201px;
+                }
+            }
+            &.active{
+                background: $cl6;
+                border-color: $cl6;
+                a{
+                    color: $white;    
+                }
+            }
+            &:hover{
+                background: $cl6;
+                border-color: $cl6;
+                a{
+                    color: $white;    
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/************************************/
+.ems-series-list{
+    .emosInfinite{
+        @extend .uk-grid;
+        .ems-prd{
+            @extend .uk-width-1-2;
+            @extend .uk-width-1-3\@m;
+            margin-bottom: 16px;
+            .ems-prd-inner{
+                height: 100%;
+            }
+            //-------------------------------------------//
+            //----- CONTENT MASK
+            //-------------------------------------------//
+            .ems-prd-mask{
+            }
+            .ems-prd-image{
+                height: 256px;
+                overflow: hidden;
+                > a{
+                    //transform: scale(1.5);
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            //-------------------------------------------//
+            //----- CONTENT MASK
+            //-------------------------------------------//
+            .ems-prd-content-mask{
+                padding: 8px 7px 16px;
+            }
+            .ems-prd-name{
+                color: $cl6;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 44px;
+                margin-bottom: 5px;
+                transition: all .3s;
+                &:hover{
+                    color: $cl7;
+                } 
+            }
+            .ems-prd-desc > a{
+                color: $cl3;
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 13px;
+
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 75px;
+            }
+
+            .ems-prd-compare-group{
+                display: none !important;
+                .ems-prd-compare{
+                    .sStylerWrp_checkbox{
+                        display: inline-block;
+                        line-height: 1;
+                        margin-right: 4px;
+                    }
+                    [id$="lbfOZS_KOD"]{
+                        display: inline-block !important;
+                        color: $cl3;
+                        font-size: 10px;
+                        line-height: 18px;
+                        vertical-align: bottom;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .ems-prd-list-paging-bottom{
+        margin-bottom: 50px;
+    }
+}
+
+
+.collections-cats-wrp{
+    > .sStylerWrp_select{
+        @extend .uk-hidden\@m;
+    }
+}
+
+
+.ems-series{
+    &.ems-product-list{
+        .active-filters-clone{
+            .urunPaging_btnKiyaslama,
+            .all-list-prd-btn-holder{
+                display: none;
+            }
+        } 
+        .collections-cats-wrp{
+            display: none;
+        }
+
+        .ems-prd-list{
+            .emosInfinite{
+                .ems-prd{
+                    .ems-prd-name{
+                        height: auto !important;
+                    }
+                    .ems-prd-compare-group{
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &.ems-series-list{
+        .ems-col-list-top{
+            .pnlUrunKiyasSecim{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+
+    //-------------------------------------------//
+    //----- CATEGORY HEAD
+    //-------------------------------------------//
+    .series-cat-head{
+        margin-bottom: 32px;
+    }
+    .tab-display-1{
+        li{
+            a{
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 14px;
+                
+                display: flex;
+                align-items: center;
+                padding: 10px 24px;
+                height: 100%;
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- ÖNE ÇIKANLAR
+    //-------------------------------------------//
+    .bathroom-collections-wrapper{
+        display: none;
+    }
+
+    
+    .ems-col-list-top{
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+    .list-title {
+        margin-bottom: 16px;
+        .page-title{
+            color: $cl6;
+            font-size: 24px;
+            line-height: 1;
+        }
+    }
+    .active-filters-clone{
+        width: 100%;
+        padding-bottom: 24px;
+    }
+
+
+    //-------------------------------------------//
+    //----- LIST V2 GRID
+    //-------------------------------------------//
+    .ems-page-product-list-v2{
+        .ems-prd-list{
+            .emosInfinite{
+            }
+            .ems-prd{
+                margin-bottom: 16px;
+                .ems-prd-inner{
+                    height: 100%;
+                    box-shadow: none !important;
+                }
+                //-------------------------------------------//
+                //----- CONTENT MASK
+                //-------------------------------------------//
+                .ems-prd-mask{
+                    padding: 0;
+                }
+                .ems-prd-image{
+                    height: 160px;
+                    border: 0;
+                }
+
+                //-------------------------------------------//
+                //----- CONTENT MASK
+                //-------------------------------------------//
+                .ems-prd-name{
+                    color: $cl3;
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 0;
+                }
+                .ems-prd-desc{
+                    display: none;
+                }
+
+                .ems-prd-compare-group{
+                    display: none !important;
+                }
+                
+            }
+        }
+
+        .ems-prd-list-paging-bottom{
+            margin-bottom: 0px;
+        }
+    }
+
+}

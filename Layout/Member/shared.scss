@@ -1,0 +1,203 @@
+//-------------------------------------------//
+//----- PAGE GROUP SPECIFIC
+//-------------------------------------------//
+.ems-member-default{
+    padding: 40px 0 115px;
+}
+
+//-------------------------------------------//
+//----- GENERAL CLASS
+//-------------------------------------------//
+.page-title-user{
+    color: $cl7;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 33px;
+    margin-bottom: 30px;
+}
+
+.page-top-title{
+    color: $cl6;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 56px;
+    margin-bottom: 40px;
+    > span{
+        display: inline-flex;
+        align-items: center;
+        i{
+            font-size: 0;
+            margin-right: 16px;
+            &:before{
+                font-size: 34px;
+            }
+        }
+    }
+}
+
+
+//-------------------------------------------//
+//----- USER HEADER
+//-------------------------------------------//
+.ems-user-header{
+    background-color: $cl5;
+    padding: 54px 0;
+}
+.ems-user-info-content{
+    .user-name{
+        color: $cl7;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 56px;
+    }
+    .user-mail{
+        color: $cl7;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 36px;
+    }
+    .user-link{
+        .edit-profile{
+            color: $cl3;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- PAGE GRID
+//-------------------------------------------//
+.ems-grid-row{
+    + .ems-grid-row{
+        margin-top: 0;
+        border-top: 1px solid #e5e5e5;
+    }
+    .col{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        > div{
+            flex: 1;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- PAGE IN SEARCH
+//-------------------------------------------//
+.member-page-head{
+    display: flex;
+    .pageInSearch-wrp{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-bottom: 40px;
+        width: 100%;
+        max-width: 368px;
+        > input{
+            height: 32px;
+            font-size: 12px;
+        }
+    }
+}
+
+
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- PAGE GROUP SPECIFIC
+    //-------------------------------------------//
+    .ems-member-default{
+        padding: 24px 0 32px;
+    }
+
+    //-------------------------------------------//
+    //----- GENERAL CLASS
+    //-------------------------------------------//
+    .page-title-user{
+        color: $cl6;
+        font-size: 20px;
+        line-height: 36px;
+        margin-bottom: 16px;
+    }
+
+    .page-top-title{
+        color: $cl6;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 56px;
+        margin-bottom: 40px;
+        > span{
+            i{
+                font-size: 0;
+                margin-right: 16px;
+                &:before{
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- USER HEADER
+    //-------------------------------------------//
+    .ems-user-header{
+        padding: 24px 0;
+    }
+    .ems-user-info-content{
+        .user-name{
+            color: $cl3;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+        .user-mail{
+            font-size: 16px;
+            line-height: 29px;
+        }
+        .user-link{
+            .edit-profile{
+                font-size: 12px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- PAGE TITLE
+    //-------------------------------------------//
+    .page-top-title{
+        color: $cl3;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 44px;
+        margin-bottom: 12px;
+        > span{
+            i{
+                font-size: 0;
+                margin-right: 8px;
+                &:before{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    
+    //-------------------------------------------//
+    //----- PAGE IN SEARCH
+    //-------------------------------------------//
+    .member-page-head{
+        flex-wrap: wrap;
+        .pageInSearch-wrp{
+            margin-bottom: 18px;
+            max-width: 100%;
+            > input{
+                height: 40px;
+                font-size: 14px;
+            }
+        }
+    }
+    
+}

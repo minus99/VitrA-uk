@@ -1,0 +1,91 @@
+//-------------------------------------------//
+//----- PAGE GROUP SPECIFIC
+//-------------------------------------------//
+.ems-page-group-corporate{
+    footer{
+        .design-your-bathroom{
+            display: none;
+        }
+    }   
+}
+
+.ems-page-corporate-detail{
+    //-------------------------------------------//
+    //----- COVER IMAGE
+    //-------------------------------------------//
+    .corporate-cover{
+        height: 416px;
+    }
+
+    //-------------------------------------------//
+    //----- CONTENT HOLDER
+    //-------------------------------------------//
+    .ems-corporate-content{
+        .page-title{
+            margin-bottom: 20px;
+        }
+        .page-content{
+            color: $cl3;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- EDITOR IN HTML CLASS
+    //-------------------------------------------//
+    .cTitle{
+        color: $cl7;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 44px;
+    }
+    .cDesc{
+        color: $cl3;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+//-------------------------------------------//
+//----- IMAGE HOLDER BORDER
+//-------------------------------------------//
+.img-holder-border{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $cl15;
+    padding: 16px;
+    height: 130px;
+    overflow: hidden;
+}
+
+@media (max-width: $breakpoint-large) {
+    .ems-page-corporate-detail{
+        //-------------------------------------------//
+        //----- PAGE GROUP SPECIFIC
+        //-------------------------------------------//
+        .ems-corporate-content{
+            .page-title{
+                margin-bottom: 0px;
+            }
+        }
+
+        //-------------------------------------------//
+        //----- COVER IMAGE
+        //-------------------------------------------//
+        .corporate-cover{
+            height: 160px;
+            margin-bottom: 10px !important;
+        }
+
+        //-------------------------------------------//
+        //----- EDITOR IN HTML CLASS
+        //-------------------------------------------//
+        .cTitle{
+            color: $cl6;
+            font-size: 20px;
+            line-height: 36px;
+        }
+    }
+}

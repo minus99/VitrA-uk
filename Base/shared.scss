@@ -1,0 +1,145 @@
+//-------------------------------------------//
+//----- GENERAL SETTINGS
+//-------------------------------------------//
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *:after, *::before {
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: $defaultFont;
+    font-weight: 400;
+    &.anaBody{
+        overflow-y: scroll;
+    }
+}
+
+a{
+    display: inline-block;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+a, 
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+img {
+    max-width: 100%;
+}
+
+//-------------------------------------------//
+//----- CONTAINER
+//-------------------------------------------//
+.ems-container{
+    max-width: $siteContainerWidth;
+    margin: 0 auto;
+}
+@media screen and (max-width: $breakpoint-large){
+    .ems-container{
+        margin: 0 $gridGutter;
+        width: 100%;
+    }
+}
+
+//-------------------------------------------//
+//----- EMOS HELPER CLASS
+//-------------------------------------------//
+.ems-hidden{ display: none; }
+.ems-none{ display: none !important; }
+
+
+//-------------------------------------------//
+//----- UI-DATEPICKER
+//-------------------------------------------//
+#ui-datepicker-div{
+    display: none;
+}
+
+
+//-------------------------------------------//
+//----- HELPER CLASS
+//-------------------------------------------//
+.img-responsive{ width: 100%; }
+.fs-72 { font-size: 72px; }
+.scroll-hidden { overflow: hidden !important; }
+
+//-------------------------------------------//
+//----- EDITABLE RESET
+//-------------------------------------------//
+.admin-wrapper{
+    z-index: 5000 !important;
+}
+[editabletype="editable-block-script"]{
+    margin-left: 0;
+}
+
+//-------------------------------------------//
+//----- UI-KIT CONTAINER
+//-------------------------------------------//
+.uk-container{
+    width: 100%;
+}
+@media (max-width: $breakpoint-large) {
+    .uk-container{
+        width: auto;
+    }
+}
+
+//-------------------------------------------//
+//----- IMAGE BORDER
+//-------------------------------------------//
+img{
+    border: none;
+}
+
+//-------------------------------------------//
+//----- İlham Verici Fikirler Fonts
+//-------------------------------------------//
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&subset=latin-ext');
+.f-poppins{ font-family: 'Poppins', sans-serif !important; }
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700&subset=latin-ext');
+.f-merriweather{ font-family: 'Merriweather', serif !important; }
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&subset=latin-ext');
+.f-josefin{ font-family: 'Josefin Sans', sans-serif !important; }
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700&subset=latin-ext');
+.f-cabin{ font-family: 'Cabin', sans-serif !important; }
+
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&subset=latin-ext');
+.f-breeSerif{ font-family: 'Bree Serif', serif  !important; }
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&subset=latin-ext');
+.f-comfortaa{ font-family: 'Comfortaa', cursive  !important; }
+
+@import url('https://fonts.googleapis.com/css?family=Crete+Round&subset=latin-ext');
+.f-creteRound{ font-family: 'Crete Round', serif !important; }

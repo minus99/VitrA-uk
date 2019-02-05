@@ -1,0 +1,320 @@
+//-------------------------------------------//
+//----- PAGE SPECIFIC
+//-------------------------------------------//
+.ems-member-project-list{
+    .page-top-title{
+        margin-bottom: 32px;
+    }
+}
+
+//-------------------------------------------//
+//----- PROJECT LIST WRAPPER
+//-------------------------------------------//
+.favoriteGroup-report{
+    margin-bottom: 19px;
+}
+
+//-------------------------------------------//
+//----- PROJE LIST HOLDER AND CONTENTS
+//-------------------------------------------//
+.ems-grid-favorite-group {
+    > div{
+        position: relative;
+    }
+
+    //-------------------------------------------//
+    //----- ACCORDION ITEM TITLE
+    //-------------------------------------------//
+    .uk-accordion-title{
+        padding-bottom: 16px;
+        cursor: pointer;
+        user-select: none;
+        border-bottom: 1px solid #{$cl15}40;
+    }
+    .ems-grid-icon{
+        display: inline-flex;
+        margin-right: 16px;
+        img{
+            max-width: 16px;
+            max-height: 16px;
+        }
+    }
+    .ems-grid-name{
+        color: $cl3;
+        font-size: 18px;
+        line-height: 33px;
+    }
+    .ems-grid-links{
+        position: absolute;
+        top: 3px;
+        right: 0;
+        .FavoriGrupSil,
+        .FavoriGrupGuncelle{
+            a{
+                color: $cl6;
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- PROJECT NULL MESSAGE
+    //-------------------------------------------//
+    .ems-message{
+        &:not(:empty){
+            margin-top: 16px;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- PROJECT ITEMS
+    //-------------------------------------------//
+    /*.ems-grid-content{
+        @extend .uk-grid;
+        &:not(:empty){
+            margin-top: 25px;
+            margin-bottom: 16px;
+        }
+        .item{
+            position: relative;
+
+            //bir kapsayıcı div eklenecek içerdeki elemanlar için ve ona verilecek padding ve box-shadow
+            //padding: 0 8px 16px;
+            //box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+            @extend .uk-width-1-2;
+            @extend .uk-width-1-6\@m;
+            .favoriGrupDetay_{
+                &urunResim{
+                    order: 1;
+                    //margin: 0 -8px 8px;
+                    border-bottom: 4px solid $cl6;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 160px;
+                    overflow: hidden;
+                }
+                &urunAd{
+                    order: 2;
+                    color: $cl3;
+                    font-size: 14px;
+                    line-height: 16px;
+                    height: 32px;
+                    overflow: hidden;
+                    margin-bottom: 8px;
+                }
+                &urunFiyat{
+                    order: 4;
+                    display: flex;
+                    color: $cl3;
+                    font-size: 10px;
+                    line-height: 18px;
+                    > span{
+                        margin-right: 5px;
+                    }
+                    > div{
+                        [id$="lbfURN_KDVDAHIL"]{
+                            display: none;
+                        }
+                    }
+                }
+                &markaAd{
+                    order: 3;
+                    color: $cl14;
+                    font-size: 12px;
+                    line-height: 22px;
+                    height: 22px;
+                    overflow: hidden;
+                    margin-bottom: 8px;
+                    &:empty{
+                        display: none;
+                    }
+                }
+                &action{
+                    position: absolute;
+                    right: 8px;
+                    bottom: 16px;
+                }
+            }
+        }
+    }*/
+    .widget-projects-prd{
+        padding: 0;
+
+        .ems-prd-cnt{
+            text-align: right;
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- NEW PROJECT BUTTON
+//-------------------------------------------//
+.ems-new-favorite-group{
+    > a{
+        color: $cl6;
+        font-size: 14px;
+        line-height: 25px;
+    }
+    [id$="lbfFAVORIGRUP_YENIGRUPEKLE"]{
+        display: inline-flex;
+        align-items: center;
+        i{
+            display: inline-block;
+            font-size: 0;
+            margin-right: 16px;
+            &:before{
+                font-size: 23px;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+
+    //-------------------------------------------//
+    //----- PAGE SPECIFIC
+    //-------------------------------------------//
+    .ems-member-project-list{
+        .page-top-title{
+            margin-bottom: 32px;
+        }
+
+        .product-for-you{
+            margin-bottom: 16px !important;
+        }
+        .design-your-bathroom{
+            display: block;
+            margin-bottom: 16px;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- PROJECT LIST WRAPPER
+    //-------------------------------------------//
+    .favoriteGroup-report{
+        margin-bottom: 16px;
+    }
+
+    //-------------------------------------------//
+    //----- PROJE LIST HOLDER AND CONTENTS
+    //-------------------------------------------//
+    .ems-grid-favorite-group {
+        > div{
+            position: relative;
+            + div{
+                margin-top: 8px !important;
+            }
+            &.uk-open{
+                .uk-accordion-title{
+                    .ems-grid-links{
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        //-------------------------------------------//
+        //----- ACCORDION ITEM TITLE
+        //-------------------------------------------//
+        .uk-accordion-title{
+            padding-bottom: 16px;
+            cursor: pointer;
+            user-select: none;
+            border-bottom: 1px solid #{$cl15}40;
+
+            padding-bottom: 8px;
+        }
+        .ems-grid-name{
+            font-size: 16px;
+        }
+        .ems-grid-links{
+            position: initial;
+            display: none;
+            margin-top: -5px;
+            margin-left: 34px;
+            *{
+                display: inline-flex;
+                line-height: 1;
+            }
+            .FavoriGrupSil,
+            .FavoriGrupGuncelle{
+                a{
+                    font-size: 12px;
+                }
+            }
+        }
+
+        //-------------------------------------------//
+        //----- ACCORDION CONTENT HOLDER
+        //-------------------------------------------//
+        .uk-accordion-content{
+            margin-top: 8px !important;
+        }
+
+        //-------------------------------------------//
+        //----- PROJECT NULL MESSAGE
+        //-------------------------------------------//
+        .ems-message{
+            margin-bottom: 0;
+            &:not(:empty){
+                margin-top: 0;
+            }
+        }
+
+        //-------------------------------------------//
+        //----- PROJECT ITEMS
+        //-------------------------------------------//
+        .ems-grid-content{
+            &:not(:empty){
+                margin-top: 8px;
+                margin-bottom: 25px;
+            }
+            .item{
+                .favoriGrupDetay_{
+                    &urunResim{
+                        height: 144px;
+                    }
+                    &urunAd{
+                        margin-bottom: 6px;
+                    }
+                    &urunFiyat{
+                        font-size: 10.31px;
+                        line-height: 19px;
+                    }
+                    &markaAd{
+                        font-size: 10px;
+                        line-height: 18px;
+                        height: 18px;
+                        margin-bottom: 4px;
+                    }
+                    &action{
+                        bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- NEW PROJECT BUTTON
+    //-------------------------------------------//
+    .ems-new-favorite-group{
+        text-align: right;
+        > a{
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 22px;
+        }
+        [id$="lbfFAVORIGRUP_YENIGRUPEKLE"]{
+            i{
+                margin-right: 4px;
+                &:before{
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,371 @@
+.page-ideas {
+    position: relative;
+}
+
+.page-ideas-list {
+    &.ems-page-listing-zebra {
+        .icerikTemplateListeItem{
+            .post-idea {
+                &.alignment-left{
+                    .uk-width-3-5\@m {
+                        margin-left: auto;
+                    }
+                    .uk-width-2-5\@m.uk-position-bottom-right {
+                        right: auto;
+                        left: 0;
+                    }
+                    .uk-text-lead {
+                        color: #B55569;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- TEXT WRAPPER
+//-------------------------------------------//
+.ivf-icerik{
+    height: 75%;
+    .pi-desc{
+        line-height: 32px;
+    }
+}
+
+
+//-------------------------------------------//
+//----- DISPLAY TYPE
+//-------------------------------------------//
+.alignment-left{
+    .ivf-icerik{
+        height: 100%;
+    }
+    
+    .img-mini-wrp{
+        > div{
+            &:first-child{
+                padding-left: 0 !important;
+            }
+        }
+    }
+}
+.alignment-right{
+    .img-mini-wrp{
+        margin-left: 0px !important;
+        > div{
+            &:first-child{
+                padding-left: 0 !important;
+            }
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- IMG DISPLAY
+//-------------------------------------------//
+.post-idea {
+    .img-big-holder > a,
+    .img-mini-holder > a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        img{
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+    }
+    .img-big-holder{
+        > *{
+            height: 384px;
+        }
+    }
+    .img-mini-holder{
+        > *{
+            height: 176px;
+            img{
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+    }
+}
+
+.page-ideas-detail {
+
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    color: $cl6 !important;
+    font-weight: 500;
+    transition: all .3s;
+    > i {
+        margin-right: 10px;
+        font-size: 32px;
+    }
+    &:hover{
+        color: $cl7 !important;
+        > span{
+            text-decoration: underline;
+        }
+    }
+}
+
+.post-idea {
+    position: relative;
+    .uk-width-2-5\@m {
+        min-height: 50%;
+        padding-bottom: 60px;
+    }
+    .uk-text-lead {
+        font-size: 36px;
+        color: #85ACB5;
+        font-weight: 700;
+        line-height: 1.12;
+    }
+    .uk-text-small {
+        font-size: 16px;   
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.catalog-prd {
+    .uk-text-small {
+        font-size: 14px;
+    }
+    .kk-text-cl6 {
+        color: $cl6;
+    }
+    .uk-card-media-top.catalog-img{
+        height: 384px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+}
+
+.tooltip-product {
+    [class*='uk-animation-'] {
+        display: none;
+    }
+    &:hover {
+        [class*='uk-animation-'] {
+            display: block;
+        }
+    }
+    .uk-position-center-right {
+        right: -20px;
+        transform: translate(100%, -50%);
+    }
+    .uk-card {
+        width: 220px;
+        background: $white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        &-media-top {
+            border-bottom: 4px solid $cl6;
+        }
+        &-title {
+            font-size: 14px;
+            color: $cl3;
+        }
+        &-category {
+            font-size: 0;
+            color: $cl14;
+            a {
+                display: none;
+                font-size: 12px;
+                &:last-child {
+                    display: inline-block;
+                }
+            }
+        }
+        &-url {
+            font-size: 0;
+        }
+        &:before {
+            $border: 12px;
+            content: "";
+            border-width: $border;
+            border-style: solid;
+            border-color: transparent $cl12 transparent transparent;
+            position: absolute;
+            left: -$border * 2;
+            top: 50%;
+            margin-top: -$border;
+        }
+        &:after {
+            $border: 10px;
+            content: "";
+            border-width: $border;
+            border-style: solid;
+            border-color: transparent $white transparent transparent;
+            position: absolute;
+            left: -$border * 2;
+            top: 50%;
+            margin-top: -$border;
+        }
+    }
+    .kk-prd-link{
+        position: relative;
+        cursor: default;
+        &:after{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            left: 50%;
+            background: #eeeeee;
+            height: 0;
+            width: calc(100% + 10px);
+            transform: translateX(-50%);
+            transition: all .3s;
+        }
+    }
+    &:hover{
+        .kk-prd-link{
+            &:after{
+                height: 50%;
+            }
+        }
+    }
+    
+}
+
+//-------------------------------------------//
+//----- LEFT MENU
+//-------------------------------------------//
+.ideas-left-menu{
+    > div:first-child{
+        height: 95%;
+    }
+}
+
+//-------------------------------------------//
+//----- TITLE
+//-------------------------------------------//
+.ideas-title{
+    margin: 32px 0 48px;
+}
+
+@media (max-width: $breakpoint-large) {
+    .page-ideas-list {
+        .post-idea {
+            margin: 0 #{-$site-gutter} 0px !important;
+            background: $cl12;
+            .uk-width-1-1.uk-margin-bottom {
+                margin-bottom: 4px !important;
+            }
+            .uk-width-2-5\@m {
+                min-height: 50%;
+                padding: 25px 15px;
+                &.uk-position-bottom-right {
+                    position: static !important;
+                }
+                &.uk-background-default {
+                    background: inherit;                    
+                }
+            }
+            .uk-width-3-5\@m {
+                .uk-width-1-3 {
+                    padding-right: 4px;
+                }
+                .uk-width-2-3 {
+                    padding-left: 4px;
+                }
+            }
+            .uk-text-lead {
+                font-size: 20px;
+            }
+            .uk-text-small {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .catalog-prd {
+        > .uk-card {
+            > .uk-card-media-top.catalog-img {
+                margin-left: -$site-gutter;
+                margin-right: -$site-gutter;
+                height: 224px;
+            }
+        }
+    }
+
+    .tooltip-product {
+        .uk-position-center-right {
+            right: auto;
+            top: 90%;
+            transform: none;
+        }
+        .uk-card {
+            &:before {
+                $border: 12px;
+                top: -$border;
+                left: 50%;
+                margin-left: -$border;
+                border-color: transparent transparent #F6F6F6 transparent
+            }
+            &:after {
+                $border: 10px;
+                top: -$border;
+                left: 50%;
+                margin-left: -$border;
+                border-color: transparent transparent $white transparent
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- TITLE
+    //-------------------------------------------//
+    .ideas-title{
+        margin: 24px 0 20px;
+    }
+
+    //-------------------------------------------//
+    //----- LEFT MENU
+    //-------------------------------------------//
+    .ideas-left-menu{
+        margin-bottom: 10px;
+        .uk-sticky-placeholder{
+            display: none;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- IMG DISPLAY
+    //-------------------------------------------//
+    .post-idea {
+        .img-big-holder > *,
+        .img-mini-holder > *{
+        }
+        .img-big-holder{
+            > *{
+                height: 160px;
+            }
+        }
+        .img-mini-holder{
+            > *{
+                height: 124px;
+                img{
+                    min-width: 100%;
+                    min-height: 100%;
+                }
+            }
+        }
+    }
+}

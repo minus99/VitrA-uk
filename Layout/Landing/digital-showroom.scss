@@ -1,0 +1,207 @@
+//-------------------------------------------//
+//----- BATHROOM PLANNER
+//-------------------------------------------//
+.ds-cover{
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: "";
+        display: inline-block;
+    
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    
+        background: rgba(0,0,0,.6);
+    }
+}
+
+.dc-cover--img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    
+    min-width: 100%;
+    max-width: initial;
+    min-height: 100%;
+}
+
+.dc-cover--content{
+    position: relative;
+    z-index: 3;
+    padding: 170px 50px 120px;
+    text-align: center;
+}
+
+.dc-cover--title{
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1;
+    color: $white;
+    margin-bottom: 40px;
+}
+
+.dc-cover--desc{
+    font-size: 24px;
+    line-height: 1.8;
+    color: $white;
+}
+
+.dc-cover--btn{
+    margin-top: 32px;
+    min-width: 315px;
+}
+
+
+
+//-------------------------------------------//
+//----- BATHROOM PLANNER CONTENT TEMPLATE SETTINGS
+//-------------------------------------------//
+.dc-gallery--wrapper{
+    padding: 40px 0;
+
+    //-------------------------------------------//
+    //----- Background Selects
+    //-------------------------------------------//
+    &.bgWhite{
+        background: $white;
+    }
+    &.bgGrey{
+        background: #ebedef;
+    }
+
+    
+    //-------------------------------------------//
+    //----- Description Controls
+    //-------------------------------------------//
+    &.desc_passive{
+        .dc-gallery--item--desc{
+            display: none;
+        }
+    }
+    
+    //-------------------------------------------//
+    //----- LightBox Settings
+    //-------------------------------------------//
+    &.lightbox_passive{
+        .lightbox_link{
+            display: none;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- Grid settings
+    //-------------------------------------------//
+    .gridThree {
+        .dc-gallery--item--img{
+            height: 240px;
+        }
+        .dc-gallery--item{
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+    .gridFour{
+        .dc-gallery--item--img{
+            height: 200px;
+        }
+    }
+}
+
+.dc-gallery--item{
+    position: relative;
+    margin: 8px 0;
+}
+.dc-gallery--title{
+    font-size: 26px;
+    font-weight: 700;
+    color: $cl7;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.dc-gallery--item--desc{
+    font-size: 18px;
+    font-weight: 500;
+    color: $cl7;
+    text-align: center;
+    padding: 5px 25px 0;
+    line-height: 30px;
+}
+.dc-gallery--item--link{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.dc-gallery--item--img{
+    /*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    */
+    overflow: hidden;
+    font-size: 0;
+
+
+
+
+    position: relative;
+    img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        transition: all 0.4s cubic-bezier(0.8, 0, 0.5, 1);
+    }
+}
+
+.dc-gallery--item{
+    &:hover{
+        .dc-gallery--item--img{
+            img{
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+    }
+}
+
+//-------------------------------------------//
+//----- Page settings
+//-------------------------------------------//
+.landing-bathroom-planner{
+    .design-your-bathroom{
+        display: none;
+    }
+}
+
+//-------------------------------------------//
+//----- IFRAME
+//-------------------------------------------//
+.dp-frame{
+    iframe{
+        width: 100%;
+        height: calc(100vh + 76px);
+        height: 100vh;
+        background: rgba(0,0,0,.5);
+    }
+}
+
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- IFRAME
+    //-------------------------------------------//
+    .dp-frame{
+        iframe{
+            height: calc(100vh - 76px);
+        }
+    }
+}

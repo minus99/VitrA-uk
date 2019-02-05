@@ -1,0 +1,15 @@
+//-------------------------------------------//
+//----- NAVBAR
+//-------------------------------------------//
+.navbar-container{
+    display: flex;
+
+    .navbar-left,
+    .navbar-right {
+        display: flex;
+        align-items: center;
+    }
+    .navbar-right{
+        margin-left: auto;
+    }
+}

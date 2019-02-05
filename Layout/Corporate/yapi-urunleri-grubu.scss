@@ -1,0 +1,23 @@
+//-------------------------------------------//
+//----- PAGE SPECIFIC
+//-------------------------------------------//
+.ems-page-corporate-detail{
+    .page-groups-building-products{
+        @extend .uk-grid;
+        @extend .uk-flex-center;
+        > div {
+            @extend .uk-width-2-3\@m;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    .ems-page-corporate-detail{
+        //-------------------------------------------//
+        //----- PAGE SPECIFIC
+        //-------------------------------------------//
+        .page-groups-building-products{
+            justify-content: flex-start;
+        }
+    }
+}

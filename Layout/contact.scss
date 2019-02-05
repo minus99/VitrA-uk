@@ -1,0 +1,59 @@
+.page-contact {
+    position: relative;
+    .page-top-title {
+        @extend .h4;
+        @extend .uk-margin-bottom;
+    }
+    .pageHeaderMesaj,
+    .page-top-desc {
+        @extend .uk-hidden;
+    }
+    a.btnMesajGonder {
+        @extend .btn-big;
+    }
+}
+
+//bize-ulasin
+.contact-info {
+    .uk-section {
+        background-color: rgba(168,175,166,.7);
+        color: #fff;
+    }
+    .title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.8;
+    }
+    .desc {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.55;
+    }
+}
+
+.ems-gizlilikOnay{
+    //display: none;
+    margin-bottom: 32px !important;
+    .sStylerWrp_checkbox{
+        display: inline-block;
+    }
+    input[type="checkbox"]{
+        margin-top: -7px;
+        margin-right: 6px;
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    //bize-ulasin mobile
+    .contact-info {
+        .h4 {
+            padding: 0 16px;
+        }
+        .title {
+            font-size: 26px;
+        }
+        .desc {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,427 @@
+//-------------------------------------------//
+//----- NAVBAR
+//-------------------------------------------//
+.navbar-container{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    background: $white;
+    height: 96px;
+
+    .navbar-holder{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+        background: #ffffff;
+    }
+
+    .navbar-left{
+
+    }
+    
+    .navbar-right{
+        margin-left: auto;
+        height: 100%;
+    }
+}
+
+//-------------------------------------------//
+//----- LOGO
+//-------------------------------------------//
+.navbar-item-logo{
+    .logo{
+        width: 100%;
+        max-width: 167px;
+        margin-right: 20px;
+    }
+}
+//-------------------------------------------//
+//----- MOBILE CONTROLLER
+//-------------------------------------------//
+.header-mobile-controller{
+    display: none;
+}
+
+//-------------------------------------------//
+//----- SEARCH
+//-------------------------------------------//
+.navbar-item-search{
+    margin-left: 16px;
+    .btn-custom-search{
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $cl3;
+        i{
+            font-size: 24px;
+        }
+    }
+}
+/***************************/
+.mod-mini-search-inner{
+    width: 100%;
+}
+.mod-mini-search-header{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .btn-search-control{
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $cl3;
+        i{
+            font-size: 24px;
+        }
+    }
+}
+.mod-mini-search-body{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    transform: translateY(-1000%);
+    z-index: 1;
+    
+    height: 96px;
+    background: $white;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    .ems-form-inner{
+        position: relative;
+        @extend .uk-container;
+    }
+    .btnArama{
+        
+    }
+    
+}
+/***************************/
+
+//-------------------------------------------//
+//----- SEARCH OPENED & ANIMATE
+//-------------------------------------------//
+.search-animate{
+    .mod-mini-search-body{
+        transform: translateY(0%);
+    }
+}
+
+//-------------------------------------------//
+//----- MEMBER
+//-------------------------------------------//
+.navbar-item-mini-member{
+    margin-left: 24px;
+}
+
+.mod-mini-login{
+    .mod-mini-login-inner{
+        position: relative;
+    }
+    .mod-mini-login-header{
+        .btn-signin{
+            @extend .btn;
+            @extend .btn-primary;
+        }
+        [id$="lbhKUTU_HESABIM"]{
+            display: flex;
+            align-items: center;
+            user-select: none;
+            cursor: pointer;
+            .btn-profile{
+                display: none;
+            }
+            > i{
+                margin-right: 13px;
+                font-size: 24px;
+                svg{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+    .mod-mini-login-body{
+        display: none;
+        position: absolute;
+        top: calc(100% - 7px);
+        .login{
+            min-width: 100%;
+
+            margin-top: 12px;
+            position: relative;
+            left: 12px;
+            transform: translateX(-50%);
+
+            padding: 14px 16px;
+            background: $white;
+            box-shadow: 0 0 16px 0 rgba(0,0,0,0.16);
+            &:before{
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: -12px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-style: solid;
+                border-width: 0 11px 12px 11px;
+                border-color: transparent transparent #ffffff transparent;
+            }
+            .ems-col{
+                margin-bottom: 10px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                a{
+                    display: block;
+                    color: $cl3;
+                    font-size: 14px;
+                    line-height: 16px;
+                    &.btnDefault{
+                        background: none;
+                        padding: 0;
+                        min-width: auto;
+                        border: none;
+                        font-weight: 400;
+                    }
+                    > span{
+                        white-space: nowrap;
+                        display: flex;
+                        align-items: center;
+                        i{
+                            margin-right: 18px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mod-mini-login-footer{
+        display: none;
+    }
+
+    // AÇIK HALİ
+    &.opened{
+        .mod-mini-login-body{
+            display: block;
+        }
+    }
+}
+.ems-logoff {
+    .sub.login,
+    [id$="lbfKUTU_HESABIM"]{ display: none !important; }
+    
+}
+.ems-login {
+    .sub.logoff,
+    .ems-user-info,
+    [id$="lbfkutuUyeGiris1"]{ display: none !important; }
+    .navbar-item-mini-member{
+        margin-left: 32px;
+    }
+}
+
+
+@media (min-width: $breakpoint-large) and (max-width: 1150px) {
+    .navbar-item-menu{
+        > div{
+            display: flex;
+            align-items: center;
+        }
+    }
+    //-------------------------------------------//
+    //----- NAVBAR
+    //-------------------------------------------//
+    .navbar-container{
+        .navbar-holder{
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- LOGO
+    //-------------------------------------------//
+    .navbar-item-logo{
+        .logo{
+            max-width: 80px;
+            margin-right: 0px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    //-------------------------------------------//
+    //----- SEARCH
+    //-------------------------------------------//
+    .navbar-item-search{
+        .btn-custom-search{
+            width: 24px;
+            height: 24px;
+            i{
+                font-size: 18px;
+            }
+        }
+    }
+    //-------------------------------------------//
+    //----- MEMBER
+    //-------------------------------------------//
+    .navbar-item-mini-member{
+        margin-left: 18px;
+    }
+
+    .mod-mini-login{
+        .mod-mini-login-header{
+            [id$="lbhKUTU_HESABIM"]{
+                > i{
+                    margin-right: 8px;
+                    font-size: 18px;
+                    svg{
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- NAVBAR
+    //-------------------------------------------//
+    .navbar-container{
+        height: 56px;
+        z-index: 1001;
+        .navbar-holder{
+            display: block;
+            padding: 16px;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- LOGO
+    //-------------------------------------------//
+    .navbar-item-logo{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            max-width: 80px;
+            margin-right: 0px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- MOBILE CONTROLLER
+    //-------------------------------------------//
+    .header-mobile-controller{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        > div {
+            + div{
+                margin-left: 24px;
+            }
+        }
+        a{
+            color: $cl3;
+            i{
+                font-size: 0;
+                &:before{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+
+    //-------------------------------------------//
+    //----- MEMBER MENU BUTTON
+    //-------------------------------------------//
+    .mb-Member{
+        .sub.login{
+            display: none;
+            max-width: 180px;
+            background: $white;
+            top: 40px !important;
+            right: 0 !important;
+            left: initial !important;
+            padding: 20px;
+            box-shadow: 0 0 8px 0 rgba(0,0,0,0.5), 0 2px 4px 0 rgba(0,0,0,0.5);
+            ul{
+                li{
+                    display: flex;
+                    align-items: center;
+                    a{
+                        color: $cl3;
+                        font-size: 16px;
+                        line-height: 1;
+                        i{
+                            margin-right: 14px;
+                            &::before{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    &:not(:first-child){
+                        margin-top: 8px;
+                    }
+                }
+            }
+            &.uk-open{
+                display: inline;
+            }
+            &:before{
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: -16px;
+                right: 12px;
+                border-bottom: 16px solid #{$black}26;
+                border-left: 16px solid transparent;
+                border-right: 16px solid transparent;
+                overflow: hidden;
+            }
+            
+            &:after{
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: -14px;
+                right: 14px;
+                border-bottom: 14px solid $white;
+                border-left: 14px solid transparent;
+                border-right: 14px solid transparent;
+                overflow: hidden;
+            }
+        }
+    }
+    .ems-logoff{
+        .mb-Member{
+            display: none !important;
+        }   
+    }
+
+    //-------------------------------------------//
+    //----- 
+    //-------------------------------------------//
+    .navbar-item-search,
+    .navbar-item-mini-member{
+        display: none;
+    }
+
+}

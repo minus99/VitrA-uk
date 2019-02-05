@@ -1,0 +1,55 @@
+//-------------------------------------------//
+//----- DROPDOWN MENU SELECT
+//-------------------------------------------//
+.custom-selectbox{
+    display: none !important;
+}
+
+//-------------------------------------------//
+//----- DROPDOWN MENU LIST
+//-------------------------------------------//
+.dropdown-menu{
+    ul{
+        li{
+            border-bottom: 1px solid $cl13;
+            a{
+                padding: 8px 0;
+                color: $cl3;
+                font-size: 14px;
+                transition: all .3s;
+                &:hover{
+                    //font-weight: 700;
+                    color: $cl7;
+                }
+            }
+        }
+    }
+}
+
+.custom-selectbox{
+    ul{
+        li{
+            &:last-child{
+                border: 0;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- DROPDOWN MENU SELECT
+    //-------------------------------------------//
+    .custom-selectbox{
+        display: block !important;
+    }
+
+    //-------------------------------------------//
+    //----- DROPDOWN MENU LIST
+    //-------------------------------------------//
+    .dropdown-menu{
+        display: none;
+    }
+
+}

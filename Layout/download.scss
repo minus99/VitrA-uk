@@ -1,0 +1,231 @@
+.ems-doc-download-holder{
+    .ems-docs-search-wrp{
+        background: $cl5;
+        padding: 30px 0 35px;
+    }
+
+    //-------------------------------------------//
+    //----- SEARCH WRAPPER
+    //-------------------------------------------//
+    .ems-docs-search{
+        input[name="inp-prd-code"]{
+            color: $cl3;
+            font-size: 14px;
+            height: 34px;
+        }
+    }
+
+
+    //-------------------------------------------//
+    //----- RESULT WRAPPER
+    //-------------------------------------------//
+    .ems-doc-download-result{
+        padding: 64px 0;
+        .search-result{
+            display: block;
+        }
+
+        .no-result-lbf{
+            display: none;
+            text-align: center;
+            i{
+                font-size: 0;
+                &:before{
+                    font-size: 128px;
+                }
+            }
+            span{
+                display: block;
+                font-size: 24px;
+                margin-top: 16px;
+            }
+        }
+
+        //-------------------------------------------//
+        //----- NO RESULT
+        //-------------------------------------------//
+        &.no-result{
+            .no-result-lbf{
+                display: block;
+            }
+            .search-result{
+                display: none;
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- SEARCH RESULT
+    //-------------------------------------------//
+    .documents-download-result{
+        .ddr-prd-item{
+            padding: 8px 0 0;
+            //-------------------------------------------//
+            //----- ACCORDION TITLE
+            //-------------------------------------------//
+            .uk-accordion-title{
+                display: flex;
+                align-items: center;
+                cursor: default;
+                .ddr-prd-image{
+                    @extend .uk-width-1-6\@m;
+                    @extend .uk-width-1-4;
+                }
+                .ddr-prd-name{
+                    color: $cl3;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                > i{
+                    margin-left: auto;
+                    display: inline-flex;
+                    background: #{$cl15}80;
+                    border-radius: 50%;
+                    transition: all 0.5s cubic-bezier(0.8, 0, 0.5, 1);
+
+                    width: 24px;
+                    height: 24px;
+                    padding: 2px;
+                    svg{
+                        width: 22px;
+                        height: 22px;
+                        color: $white;
+                    }
+                }
+            }
+            &.uk-open{
+                .uk-accordion-title{
+                    > i{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            + .ddr-prd-item{
+                border-top: 1px solid #{$cl15}40;
+            }
+
+            //-------------------------------------------//
+            //----- ACCORDION CONTENT
+            //-------------------------------------------//
+            .uk-accordion-content{
+                margin-top: 0 !important;
+            }
+            .ddr-prd-item-docs{
+                margin-left: calc(100% / 6);
+                .doc-item{
+                    a{
+                        display: flex;
+                        align-items: center;
+                        > i{
+                            display: inline-flex;
+                            font-size: 0;
+                            margin-right: 6px;
+                            &:before{
+                                font-size: 20px;
+                            }
+                        }
+                        .doc-info{
+                            span{
+                                + span{
+                                    &:before{
+                                       content: "|";
+                                       margin: 0 3px; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    + .doc-item{
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-large) {
+
+
+    .ems-doc-download-holder{
+        .ems-docs-search-wrp{
+            padding: 16px 0;
+        }
+
+        .ems-docs-search{
+            position: relative;
+        }
+
+        //-------------------------------------------//
+        //----- SEARCH BUTTON
+        //-------------------------------------------//
+        .btn-docs-search{
+            min-width: auto;
+            width: calc(100% / 4);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        //-------------------------------------------//
+        //----- RESULT WRAPPER
+        //-------------------------------------------//
+        .ems-doc-download-result{
+            padding: 16px 0;
+    
+            .no-result-lbf{
+                padding: 32px 0;
+                i{
+                    &:before{
+                        font-size: 64px;
+                    }
+                }
+                span{
+                    font-size: 18px;
+                }
+            }
+        }
+    
+        //-------------------------------------------//
+        //----- SEARCH RESULT
+        //-------------------------------------------//
+        .documents-download-result{
+            .ddr-prd-item{
+                padding: 8px 0 0;
+                //-------------------------------------------//
+                //----- ACCORDION TITLE
+                //-------------------------------------------//
+                .uk-accordion-title{
+                    .ddr-prd-image{
+                        > img{
+                            max-width: 100%;
+                        }
+                    }
+                    .ddr-prd-name{
+                        font-size: 16px;
+                    }
+                    > i{
+                        display: none;
+                    }
+                }
+    
+                //-------------------------------------------//
+                //----- ACCORDION CONTENT
+                //-------------------------------------------//
+                .ddr-prd-item-docs{
+                    margin-left: 16px;
+                    .doc-item{
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+
+
+
+}

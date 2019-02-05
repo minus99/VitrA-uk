@@ -1,0 +1,166 @@
+//-------------------------------------------//
+//----- INOVASYON
+//-------------------------------------------//
+.ems-page-innovation{
+
+    //-------------------------------------------//
+    //----- TITLE TYPE
+    //-------------------------------------------//
+    .title-medium{
+        color: $cl7;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 44px;
+    }
+    .title-large{
+        color: $cl7;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 56px;
+    }
+
+    //-------------------------------------------//
+    //----- ARTICLE TYPE
+    //-------------------------------------------//
+    .inv-article{
+        margin-bottom: 32px;
+        .title-large{
+            margin-bottom: 8px;
+        }
+        .image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 352px;
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+        .description{
+            color: $cl3;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    //-------------------------------------------//
+    //----- RELATED THECNOLOGY 
+    //-------------------------------------------//
+    .related-groups{
+        .item{
+            padding-top: 32px;
+            padding-bottom: 32px;
+            .title-medium{
+                margin-bottom: 20px;
+            }
+            &-desc{
+                color: $cl3;
+                line-height: 24px;
+                margin-bottom: 32px;
+            }
+            &-links{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -32px;
+                > li{
+                    margin-left: 32px;
+                    margin-bottom: 16px;
+                    > a{
+                        display: flex;
+                        color: $cl6;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 29px;
+                        i{
+                            display: inline-block;
+                            font-size: 0;
+                            margin-right: 8px;
+                            &:before{
+                                font-size: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- INOVASYON
+    //-------------------------------------------//
+    .ems-page-innovation{
+        //-------------------------------------------//
+        //----- COVER IMAGE
+        //-------------------------------------------//
+        .corporate-cover{
+            height: 160px;
+            margin-bottom: 10px !important;
+        }
+
+        //-------------------------------------------//
+        //----- TITLE TYPE
+        //-------------------------------------------//
+        .title-medium{
+            color: $cl6;
+            font-size: 20px;
+            line-height: 36px;
+        }
+        .title-large{
+            color: $cl6;
+            font-size: 20px;
+            line-height: 36px;
+        }
+
+        //-------------------------------------------//
+        //----- ARTICLE TYPE
+        //-------------------------------------------//
+        .inv-article{
+            margin-bottom: 32px;
+            .title-large{
+                margin-bottom: 18px;
+            }
+            .image{
+                height: auto;
+                margin-bottom: 8px;
+            }
+            .description{
+                color: $cl3;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+
+        //-------------------------------------------//
+        //----- RELATED THECNOLOGY 
+        //-------------------------------------------//
+        .related-groups{
+            .item{
+                padding-top: 8px;
+                padding-bottom: 0px;
+                .item{
+                    &-desc{
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin-bottom: 16px;
+                    }
+                    &-links{
+                        > li{
+                            width: 100%;
+                            > a{
+                                display: flex;
+                                align-items: center;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

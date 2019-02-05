@@ -1,0 +1,27 @@
+//-------------------------------------------//
+//----- ÜRÜN LİSTE PAGİNG
+//-------------------------------------------//
+.ems-prd-list-paging{
+    table{
+        tbody{
+            tr{
+                > td{
+                    width: 100%!important;
+                    &[align="left"]{
+                        display: none;
+                    }
+                    &[align="right"]{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.urunPaging_pageNavigation{
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}

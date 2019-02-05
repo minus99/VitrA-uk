@@ -1,0 +1,145 @@
+//-------------------------------------------//
+//----- FAQ
+//-------------------------------------------//
+.ems-page-sss{
+    .page-title{
+        margin-bottom: 44px;
+    }
+    .icerikListePagingAlt{
+        display: none;
+    }
+    //-------------------------------------------//
+    //----- LEFT MENU
+    //-------------------------------------------//
+    .sss-menu{
+        max-width: 85%;
+        border-top: 1px solid $cl13; 
+        li{
+            border-bottom: 1px solid $cl13; 
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                color: $cl3;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 24px;
+                padding: 7px 0 9px;
+                
+                &:after{
+                    margin-left: auto;
+                    @extend [class^="icon-"];
+                    @extend .icon-ileri:before;
+                }
+            }
+            &.uk-active{
+                a{
+                    color: $cl6;
+                }
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- FAQ CONTENT
+    //-------------------------------------------//
+    .faq-contents-s1{
+        > li{
+
+        }
+    }
+
+    .faq-contents-s2{
+        > :nth-child(n+2){
+            margin-top: 0;
+        }
+        > li{
+            .uk-accordion-title{
+                padding: 4px 8px 3px;
+                background-color: $cl8;
+                border: 1px solid $cl13;
+                margin-top: -1px;
+
+                color: $cl3;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 25px;
+                &:after{
+                    content: none;
+                }
+            }
+            .uk-accordion-content{
+                padding: 8px;
+                margin-top: 0;
+                
+                border-left: 1px solid $cl13;
+                border-right: 1px solid $cl13;
+                
+                color: $cl3;
+                font-size: 14px;
+                line-height: 25px;
+            }
+            &:last-child{
+                .uk-accordion-content{
+                    border-bottom: 1px solid $cl13;
+                }   
+            }
+        }
+    }
+
+    //-------------------------------------------//
+    //----- BANNER CONTENT
+    //-------------------------------------------//
+    .bnr-container{
+        margin-top: 112px;
+    }
+}
+
+@media (max-width: $breakpoint-large) {
+    //-------------------------------------------//
+    //----- FAQ
+    //-------------------------------------------//
+    .ems-page-sss{
+        .page-title{
+            font-size: 24px;
+            line-height: 44px;
+            margin-bottom: 24px;
+        }
+        .faq-search-input{
+            margin-bottom: 24px;
+        }
+
+        //-------------------------------------------//
+        //----- FAQ CONTENT
+        //-------------------------------------------//
+        .faq-contents-s1{
+            margin: 0 -16px;
+            > :nth-child(n+2){
+                margin-top: 0;
+            }
+            > li{
+                padding: 0 16px;
+                border-top: 1px solid $cl15;
+                > .uk-accordion-title{
+                    color: $cl3;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 44px;
+                }
+                > .uk-accordion-content{
+                    margin-bottom: 16px;
+                }
+                &:first-child{
+                    border-top: 0px;
+                }
+            }
+        }
+        //-------------------------------------------//
+        //----- BANNER CONTENT
+        //-------------------------------------------//
+        .bnr-container{
+            margin-top: 32px;
+        }
+    }
+}
