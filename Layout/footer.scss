@@ -154,6 +154,22 @@
     width: 100%;
 }
 
+.divchkPrivacyNotice{
+    order: 4;
+    display: flex !important;
+    align-items: flex-start;
+    margin-top: 5px;
+    @extend .uk-width-3-4\@m;
+    .data-Privacy{
+        display: inline-flex;
+        margin-top: 3px;
+    }
+    [id$="lbfPrivacyNotice"]{
+        color: #fff;
+        margin-left: 8px;
+    }
+}
+
 //-------------------------------------------//
 //----- FOOTER NAVBAR
 //-------------------------------------------//
