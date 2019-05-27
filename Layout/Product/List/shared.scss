@@ -171,7 +171,7 @@
                             height: 64px;
                             border: 1px solid $cl3;
                             background: $white;
-                            border-radius: 11px;
+                            border-radius: 100%;
                             font-size: 34px;
                             margin: 0 auto;
                             transition: all .3s cubic-bezier(0.8, 0, 0.5, 1);
@@ -418,19 +418,6 @@
                             display: inline-block;
                             height: 100%;
                             text-align: center;
-                            i{
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                width: 64px;
-                                height: 64px;
-                                border: 1px solid $cl3;
-                                background: $white;
-                                border-radius: 11px;
-                                font-size: 34px;
-                                margin: 0 auto;
-                                transition: all .3s cubic-bezier(0.8, 0, 0.5, 1);
-                            }
                             span{
                                 display: block;
                                 max-width: 70px;
