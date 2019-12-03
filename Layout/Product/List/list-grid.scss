@@ -24,6 +24,7 @@
                 .ems-prd-inner{
                     height: 100%;
                     box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+                    position: relative;
                 }
                 //-------------------------------------------//
                 //----- CONTENT MASK
@@ -61,12 +62,30 @@
                 }
                 
                 .ems-prd-desc{
-                    display: none;
+                    padding: 0 7px;
+                    position: absolute;
+                    left: 0;
+                    top: auto;
+                    z-index: 2;
+                    width: 100%;
+                    > a {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 100%;
+                        background: $white;
+                        max-height: 130px;
+                    }
+                    &:hover {
+                        > a {
+                            white-space: normal;
+                        }
+                    }
                 }
 
                 .ems-brand{
                     position: relative;
-                    height: 21px;
+                    margin-top: 20px;
                     .ems-brand-name{
                         margin: 5px 0;
                         color: $cl14;
@@ -149,6 +168,7 @@
 
                 .ems-prd-compare-group{
                     display: inline-block !important;
+                    margin-top: 5px;
                     cursor: pointer;
                     .ems-prd-compare{
                         .sStylerWrp_checkbox{
