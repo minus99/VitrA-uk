@@ -177,11 +177,6 @@
     padding-top: 32px;
     padding-bottom: 32px;
     background-color: $cl9;
-
-    position: fixed;
-    bottom: 0;
-    z-index: 2;
-    width: 100%;
 }
 
 .footer-main-links{
@@ -395,7 +390,7 @@ main,
 .site-footer-head{
     background: $white;
     position: relative;
-    z-index: 3;
+    //z-index: 3;
     display: flex;
     flex-direction: column;
 }
@@ -409,21 +404,11 @@ main{
 }
 .site-footer {
     position: relative;
-    padding-top: 470.34125px;
     bottom: 0;
     margin: 0 auto;
     width: 100%;
     z-index: 1;
 }
-.footer-effect-ready {
-    .site-footer {
-        padding-top: 0;
-    }
-    .footer-navbar {
-        position: relative;
-    }
-}
-
 
 //-------------------------------------------//
 //----- KVK MODAL

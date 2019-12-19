@@ -89,7 +89,7 @@ img {
 //-------------------------------------------//
 .img-responsive{ width: 100%; }
 .fs-72 { font-size: 72px; }
-.scroll-hidden { overflow: hidden !important; }
+.scroll-hidden { overflow: hidden !important; position: fixed; width: 100%; }
 
 //-------------------------------------------//
 //----- EDITABLE RESET

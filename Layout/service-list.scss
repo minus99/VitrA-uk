@@ -51,7 +51,6 @@
 }
 
 .mod-service-list-inner-wrp,
-.mod-service-list-body,
 .service-list,
 #servisIcerik{
     height: 100%;;
@@ -123,37 +122,43 @@
     }
 }
 
+.mod-service-list-body {
+    height: calc(100% - 216px);
+}
+
 .servisIcerik{
     margin-top: 14px;
-    height: 80%;
+    height: 100%;
     overflow: auto;
-    &::-webkit-scrollbar-track{
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-        background-color: $cl5;
-    }
-
     &::-webkit-scrollbar{
-        width: 3px;
+        width: 14px;
+    }
+    &::-webkit-scrollbar-track{
         background-color: $cl5;
     }
-
     &::-webkit-scrollbar-thumb{
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-        background-color: $cl14;
+        background-color: rgba(0, 0, 0, 0.75);
+        height: 14px;
+        border-radius: 5px;
     }
     &:before{
         content: "";
         display: inline-block;
         position: absolute;
-        height: 45px;
+        height: 35px;
         width: 100%;
         z-index: 100;
         bottom: 0;
         background: linear-gradient(to top, #ffffff, rgba(0, 219, 222, 0));
+        pointer-events: none;
+    }
+    .servis_bilgi {
+        display: none;
     }
     .pServisListe{
-        padding: 15px 18px 15px 55px;
+        padding: 15px 18px;
         position: relative;
+        $pr: 28%;
         &:after{
             content: "";
             display: inline-block;
@@ -164,23 +169,46 @@
             bottom: 0;
             left: 18px;
         }
+        &:last-child {
+            margin-bottom: 20px;
+        }
         [class$="_FirmaAdi"]{
             color: $cl3;
             font-size: 14px;
             font-weight: 700;
             line-height: 19px;
+            padding-right: $pr;
         }
-        [class$="_Adres"]
-        [class$="_UlkeSehirSemt"]{
+        [class$="_WebAdresi"] {
+            font-size: 12px;
+            margin-top: 5px;
+            padding-right: $pr;
+            position: relative;
+            z-index: 2;
+        }
+        [class$="_Adres"] {
             color: $cl3;
-            font-size: 14px;
-            line-height: 19px;
-        }
-        [class$="_UlkeSehirSemt"]{
-            display: none;
+            margin-top: 5px;
+            position: relative;
+            padding-right: $pr;
         }
         [class$="_Telefon"]{
             margin-top: 10px;
+            padding-right: $pr;
+            position: relative;
+            z-index: 2;
+        }
+        .view-360 {
+            $s: 48px;
+            width: $s;
+            height: $s;
+            background: url(/images/frontend/360.svg) no-repeat;
+            position: absolute;
+            right: 22px;
+            top: 50%;
+            margin-top: -$s/2;
+            z-index: 2;
+            font-size: 0;
         }
         [class$="_ServisTur"]{
             font-size: 0;
@@ -197,20 +225,29 @@
             .phone{
                 display: none;
             }
-            a:not(.phone){
+            a[rel][onclick]{
                 position: absolute;
                 top: 0;
                 left: 0;
+                z-index: 1;
                 width: 100%;
                 height: 100%;
 
                 font-size: 0;
             }
-
+            a.show-map-btn {
+                position: absolute;
+                right: 18px;
+                bottom: 6px;
+                z-index: 2;
+                padding: 5px;
+                font-size: 10px;
+                font-weight: 700;
+            }
         }
+        [class$="_UlkeSehirSemt"],
         [class$="_DepoSec"],
         [class$="_Yetkili"],
-        [class$="_WebAdresi"],
         [class$="_Email"],
         [class$="_Fax"],
         [class$="_tdResim"]{
@@ -233,8 +270,16 @@
         }
         &.selected{
             background-color: rgba(151, 49, 41, .1);
+            [class$="_Koordinat"]{
+                a[rel][onclick]{
+                    pointer-events: none;
+                }
+            }
         }
     }
+}
+.servis_kayitYok {
+    padding: 20px;
 }
 
 
