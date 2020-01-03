@@ -207,3 +207,44 @@ html.popup-html {
         padding: 16px 0 0 0;
     }
 }
+
+////////////////////////////////////////
+#btnUyelikAnonim {
+    @extend .btn-custom1;
+    margin-top: 20px;
+    min-width: 100%;
+}
+.popup_uyelikAnonimlestir {
+    .jconfirm-box-container {
+        max-width: 600px !important;
+    }
+    .jconfirm-content {
+        min-height: 440px !important;
+    }
+}
+
+.popupUyelikAnonim {
+    position: relative;
+}
+.popupUyelikAnonim_iptalListe,
+.popupUyelikAnonim_btnUyelikAnonimKaydet {
+    margin-top: 15px;
+}
+.uyelikIptal_secenek {
+    @extend .uk-flex;
+    @extend .uk-flex-middle;
+    > input {
+        margin-right: 5px;
+        @extend .uk-flex-none;
+    }
+
+    & + & {
+        margin-top: 7px;
+    }
+}
+.uyelikAnonimConfirm {
+    border: 1px solid #ccc;
+    ~ .ui-widget-overlay {
+        background: rgba(255,255,255,.77) !important;
+    }
+}

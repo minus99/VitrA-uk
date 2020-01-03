@@ -123,6 +123,7 @@
 }
 
 .mod-service-list-body {
+    width: 100%;
     height: calc(100% - 216px);
 }
 
@@ -180,6 +181,13 @@
             padding-right: $pr;
         }
         [class$="_WebAdresi"] {
+            font-size: 12px;
+            margin-top: 5px;
+            padding-right: $pr;
+            position: relative;
+            z-index: 2;
+        }
+        [class$="_Email"] {
             font-size: 12px;
             margin-top: 5px;
             padding-right: $pr;
@@ -248,7 +256,6 @@
         [class$="_UlkeSehirSemt"],
         [class$="_DepoSec"],
         [class$="_Yetkili"],
-        [class$="_Email"],
         [class$="_Fax"],
         [class$="_tdResim"]{
             display: none;
