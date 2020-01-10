@@ -261,6 +261,22 @@ a.btnDefault{
     }
 }
 
+//-------------------------------------------//
+//----- gray to red
+//-------------------------------------------//
+.btn-custom1{
+    background: #6e6e6e;
+    border-color: #6e6e6e;
+    color: $white;
+    min-width: auto;
+
+    &:hover,
+    &:focus{
+        background: #973129;
+        border-color: #973129;
+        color: $white;
+    }
+}
 
 
 
