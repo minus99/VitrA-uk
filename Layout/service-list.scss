@@ -1,9 +1,9 @@
 //-------------------------------------------//
 //----- SERVICE LIST
 //-------------------------------------------//
-.ems-page-service-list{
-    footer{
-        .design-your-bathroom{
+.ems-page-service-list {
+    footer {
+        .design-your-bathroom {
             display: none;
         }
     }
@@ -12,86 +12,102 @@
 //-------------------------------------------//
 //----- SERVICE LIST
 //-------------------------------------------//
-.mod-service-list{
+
+/*
+.mod-service-list.service-ajx-loading {
+    .mod-service-list-inner-wrp {
+        .mod-service-list-body {
+            #servisIcerik {
+                background-image: url("/images/pageLoading.gif");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 80px 80px;
+            }
+            .servisIcerik {
+            }
+        }
+    }
+}
+*/
+
+.mod-service-list {
     position: relative;
     display: flex;
     height: calc(100vh - 96px);
-    .address-detail{
-        position: absolute;
+    .address-detail {
         z-index: 98;
         width: 100%;
         height: 100%;
     }
 }
-.address-detail-inner{
+
+.address-detail-inner {
     height: 100%;
     .left-column,
-    .back-btn{
+    .back-btn {
         display: none;
     }
-    .right-column{
+    .right-column {
         height: 100%;
     }
-    .map{
+    .map {
         height: 100%;
     }
 }
 
-.mod-service-list-inner{
+.mod-service-list-inner {
     position: relative;
     z-index: 99;
-    margin-top: 6px;
-    margin-left: 40px;
     background: $white;
-
     width: 410px;
     padding-top: 24px;
-    height: 75%;
+    height: 100%;
     overflow: hidden;
 }
 
 .mod-service-list-inner-wrp,
 .service-list,
-#servisIcerik{
-    height: 100%;;
+#servisIcerik {
+    height: 100%;
+    ;
 }
 
-
-.mod-service-list-header{
-    [id$="lbfKUTU_YETKILISERVISLER"]{
+.mod-service-list-header {
+    [id$="lbfKUTU_YETKILISERVISLER"] {
         //display: none;
-        .near-location-wrap{
+        .near-location-wrap {
             padding-left: 18px;
             padding-right: 18px;
-            .allow-share-location-btn{
+            .allow-share-location-btn {
                 width: 100%;
                 color: $black;
                 border-color: $cl9;
                 margin-bottom: 16px;
                 &:hover,
-                &:focus{
+                &:focus {
                     border-color: $cl6;
                     color: $white;
                 }
             }
         }
     }
-    .ems-form{
+    .ems-form {
         padding-left: 18px;
         padding-right: 18px;
     }
 }
 
-.mod-service-list-search{
+.mod-service-list-search {
     display: flex;
 }
-.mod-service-list-search-btn{
+
+.mod-service-list-search-btn {
     padding-left: 0;
-    .ems-form-obj{
+    .ems-form-obj {
         display: flex;
         height: 100%;
     }
-    .btnSrvArama{
+    .btnSrvArama {
         width: 100%;
         min-width: auto;
         height: 100%;
@@ -100,22 +116,23 @@
         justify-content: center;
     }
 }
-.mod-service-list-type{
+
+.mod-service-list-type {
     margin-top: 20px;
     padding-left: 18px;
     padding-right: 18px;
     text-align: right;
-    a{
+    a {
         color: $cl3;
         font-size: 10px;
         line-height: 14px;
         margin-left: 3px;
-        &:not(:first-child):before{
+        &:not(:first-child):before {
             content: "|";
             margin-right: 3px;
             color: $cl3 !important;
         }
-        &.active{
+        &.active {
             color: $cl6;
             font-weight: 600;
         }
@@ -124,25 +141,24 @@
 
 .mod-service-list-body {
     width: 100%;
-    height: calc(100% - 216px);
+    height: calc(100% - 167px);
 }
 
-.servisIcerik{
-    margin-top: 14px;
-    height: 100%;
-    overflow: auto;
-    &::-webkit-scrollbar{
+.servisIcerik {
+    overflow: scroll;
+    height: calc(100% - 25px);
+    &::-webkit-scrollbar {
         width: 14px;
     }
-    &::-webkit-scrollbar-track{
+    &::-webkit-scrollbar-track {
         background-color: $cl5;
     }
-    &::-webkit-scrollbar-thumb{
+    &::-webkit-scrollbar-thumb {
         background-color: rgba(0, 0, 0, 0.75);
         height: 14px;
         border-radius: 5px;
     }
-    &:before{
+    &:before {
         content: "";
         display: inline-block;
         position: absolute;
@@ -156,11 +172,11 @@
     .servis_bilgi {
         display: none;
     }
-    .pServisListe{
-        padding: 15px 18px;
+    .pServisListe {
+        padding: 15px 18px 15px 55px;
         position: relative;
         $pr: 28%;
-        &:after{
+        &:after {
             content: "";
             display: inline-block;
             width: calc(100% - 36px);
@@ -173,9 +189,24 @@
         &:last-child {
             margin-bottom: 20px;
         }
-        [class$="_FirmaAdi"]{
+        .divServisListe_Koordinat {
+            display: flex;
+            >.phone {
+                order: 1;
+            }
+            >.show-map-btn {
+                order: 3;
+            }
+            >.divServisListe_Email {
+                order: 2;
+            }
+            >a {
+                z-index: 99;
+            }
+        }
+        [class$="_FirmaAdi"] {
             color: $cl3;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 700;
             line-height: 19px;
             padding-right: $pr;
@@ -189,10 +220,14 @@
         }
         [class$="_Email"] {
             font-size: 12px;
-            margin-top: 5px;
-            padding-right: $pr;
+            margin-right: 8px;
+            padding-right: 8px;
+            font-weight: 700;
             position: relative;
             z-index: 2;
+            display: inline-flex;
+            border-right: 1px solid #000;
+            text-decoration: underline;
         }
         [class$="_Adres"] {
             color: $cl3;
@@ -200,7 +235,7 @@
             position: relative;
             padding-right: $pr;
         }
-        [class$="_Telefon"]{
+        [class$="_Telefon"] {
             margin-top: 10px;
             padding-right: $pr;
             position: relative;
@@ -218,93 +253,99 @@
             z-index: 2;
             font-size: 0;
         }
-        [class$="_ServisTur"]{
+        [class$="_ServisTur"] {
             font-size: 0;
             position: absolute;
             left: 18px;
             top: 21px;
-            &:before{
+            &:before {
                 content: "";
                 @extend [class^="icon-"];
                 font-size: 24px;
             }
         }
-        [class$="_Koordinat"]{
-            .phone{
+        [class$="_Koordinat"] {
+            .phone {
                 display: none;
             }
-            a[rel][onclick]{
+            a[rel][onclick] {
                 position: absolute;
                 top: 0;
                 left: 0;
                 z-index: 1;
                 width: 100%;
                 height: 100%;
-
                 font-size: 0;
             }
             a.show-map-btn {
-                position: absolute;
                 right: 18px;
                 bottom: 6px;
                 z-index: 2;
-                padding: 5px;
-                font-size: 10px;
+                font-size: 12px;
                 font-weight: 700;
+                text-decoration: underline;
             }
         }
         [class$="_UlkeSehirSemt"],
         [class$="_DepoSec"],
         [class$="_Yetkili"],
         [class$="_Fax"],
-        [class$="_tdResim"]{
+        [class$="_tdResim"] {
             display: none;
         }
-
-        &.SatışNoktası{
-            [class$="_ServisTur"]{
-                &:before{
-                    @extend .icon-tag:before;
-                }
-            }   
-        }
-        &.ServisNoktası{
-            [class$="_ServisTur"]{
-            &:before{
-                @extend .icon-setting:before;
+        &.SatışNoktası {
+            [class$="_ServisTur"] {
+                &:before {
+                    // @extend .icon-tag: before;
                 }
             }
         }
-        &.selected{
+        &.ServisNoktası {
+            [class$="_ServisTur"] {
+                &:before {
+                    // @extend .icon-setting: before;
+                }
+            }
+        }
+        &.selected {
             background-color: rgba(151, 49, 41, .1);
-            [class$="_Koordinat"]{
-                a[rel][onclick]{
+            [class$="_Koordinat"] {
+                a[rel][onclick] {
                     pointer-events: none;
                 }
             }
         }
     }
+    .pServisListe {
+        opacity: 0;
+        transition: all .3s ease-in-out;
+    }
+    .pServisListe.activeted {
+        opacity: 1;
+    }
 }
+
 .servis_kayitYok {
     padding: 20px;
 }
 
+.divServisListe_Email {}
 
 @media (max-width: $breakpoint-large) {
-    .mod-service-list{
+    .mod-service-list {
         flex-wrap: wrap;
         height: auto !important;
-        .address-detail{
+        .address-detail {
             position: initial;
         }
     }
-    .address-detail-inner{
+    .address-detail-inner {
         order: 1;
-        .map{
+        .map {
             height: 260px;
         }
     }
-    .mod-service-list-inner{
+    .mod-service-list-inner {
         order: 2;
         margin-top: 0px;
         margin-left: 0px;
@@ -312,48 +353,72 @@
         min-height: initial;
         padding-top: 0px;
     }
-    .mod-service-list-inner-wrp{
+    .mod-service-list-inner-wrp {
         display: flex;
         flex-wrap: wrap;
     }
-    .mod-service-list-header{
+    .mod-service-list-header {
         order: 2;
         width: 100%;
         margin-top: 22px;
     }
-    .address-detail{
+    .address-detail {
         order: 1;
     }
-    .mod-service-list-body{
+    .mod-service-list-body {
         order: 3;
     }
-
-    .mod-service-list-type{
+    .mod-service-list-type {
         margin-top: 15px;
-        a{
+        a {
             font-weight: 700;
             line-height: 18px;
-            &.active{
+            &.active {
                 font-weight: 700;
             }
         }
     }
-    .servisIcerik{
+    .servisIcerik {
         margin-top: 12px;
         height: 480px;
-        .pServisListe{
-            [class$="_FirmaAdi"]{
+        .pServisListe {
+            .divServisListe_Koordinat {
+                .divServisListe_Email {
+                    font-size: 14px;
+                    ;
+                }
+                .show-map-btn {
+                    font-size: 14px !important;
+                }
+            }
+            [class$="_FirmaAdi"] {
                 font-size: 13px;
                 line-height: 23px;
             }
-            [class$="_Adres"]
-            [class$="_UlkeSehirSemt"]{
+            [class$="_Adres"] [class$="_UlkeSehirSemt"] {
                 font-size: 13px;
                 line-height: 23px;
             }
-            [class$="_Telefon"]{
+            [class$="_Telefon"] {
                 margin-top: 0;
             }
+            [class$="_Koordinat"] {
+                .phone {
+                    text-decoration: underline;
+                    font-weight: bold;
+                    border-right: 1px solid #000;
+                    margin-right: 5px;
+                    padding-right: 5px;
+                    display: inline-flex;
+                    font-size: 14px;
+                }
+            }
         }
+        .pServisListe:last-child {
+            padding-bottom: 0px;
+        }
+    }
+    .divServisListe_Telefon {
+        display: none;
     }
 }
